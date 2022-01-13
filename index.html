@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" />
-  <meta name="description" content="Rira Institute of Technology - Coming Soon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
   <title>Rira Institute of Technology</title>
+  <meta name="description" content="Rira Institute of Technology - Coming Soon">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -29,16 +34,17 @@
           flex-direction: column;
           height: 100vh;
           justify-content: center;
-          min-height: 960px;
+          min-height: 1060px;
           min-width: 320px;
           margin: 0;
-          padding: 0;}
+          padding: 0;
+      }
 
       header {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 30px 20px 20px;
+          padding: 20px;
           background-color: #fff;
       }
 
@@ -78,6 +84,30 @@
           color: #000;
       }
 
+      .sns-container {
+          margin-top: 10px;
+      }
+
+      .sns-container a {
+          display: inline-block;
+      }
+
+      .sns-container :not(:first-child) {
+          margin-left: 20px;
+      }
+
+      .icon_twitter {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+      }
+
+      .icon_discord {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+      }
+
       main {
           display: flex;
           flex-direction: column;
@@ -113,7 +143,7 @@
 
       @media (min-width: 960px) {
           header {
-              padding: 45px 0;
+              padding: 40px 0 22px;
           }
 
           .logo-rit {
@@ -136,6 +166,20 @@
 
           .newline {
               display: none;
+          }
+
+          .sns-container {
+              margin-top: 20px;
+          }
+
+          .icon_twitter {
+              width: 48px;
+              height: 48px;
+          }
+
+          .icon_discord {
+              width: 48px;
+              height: 48px;
           }
 
           main {
@@ -169,6 +213,22 @@
   </span>
 
   <span class="introduction__kr">한일공동프로젝트인 RIT KawaiiGirlNFT×DSC입니다</span>
+
+  <div class="sns-container">
+    <a href="https://rira-university.github.io/rira-web-test/">
+      <img src="img/icon-twitter.png"
+           srcset="img/icon-twitter@2x.png 2x,
+             img/icon-twitter@3x.png 3x"
+           class="icon_twitter" alt="Twitter icon">
+    </a>
+
+    <a href="https://rira-university.github.io/rira-web-test/">
+      <img src="img/icon-discord.png"
+           srcset="img/icon-discord@2x.png 2x,
+             img/icon-discord@3x.png 3x"
+           class="icon_discord" alt="Discord icon">
+    </a>
+  </div>
 </header>
 
 <main>
