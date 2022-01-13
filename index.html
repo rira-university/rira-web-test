@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <title>Rira Institute of Technology</title>
+  <meta name="description" content="Rira Institute of Technology - Coming Soon">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rira-university.github.io/rira-web/">
+  <meta property="og:title" content="Rira Institute of Technology">
+  <meta property="og:description" content="Rira Institute of Technology - Coming Soon">
+  <meta property="og:image" content="https://rira-university.github.io/rira-web/img/meta-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rira-university.github.io/rira-web/">
+  <meta property="twitter:title" content="Rira Institute of Technology">
+  <meta property="twitter:description" content="Rira Institute of Technology - Coming Soon">
+  <meta property="twitter:image" content="https://rira-university.github.io/rira-web/img/meta-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+      body {
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          justify-content: center;
+          min-height: 1060px;
+          min-width: 320px;
+          margin: 0;
+          padding: 0;
+      }
+
+      header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          background-color: #fff;
+      }
+
+      .logo-rit {
+          width: 210px;
+          height: 60px;
+          object-fit: contain;
+      }
+
+      .introduction__cj {
+          margin-top: 20px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.38px;
+          text-align: center;
+          color: #000;
+      }
+
+      .introduction__cj .fw-n {
+          font-weight: normal;
+      }
+
+      .introduction__kr {
+          margin-top: 10px;
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: -0.38px;
+          text-align: center;
+          color: #000;
+      }
+
+      .sns-container {
+          margin-top: 10px;
+      }
+
+      .sns-container a {
+          display: inline-block;
+      }
+
+      .sns-container :not(:first-child) {
+          margin-left: 20px;
+      }
+
+      .icon_twitter {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+      }
+
+      .icon_discord {
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+      }
+
+      main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          height: 440px;
+          overflow: hidden;
+      }
+
+      .coming-soon {
+          width: 225px;
+          height: 40px;
+          margin-top: 30px;
+          object-fit: contain;
+      }
+
+      .university {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          z-index: -1;
+      }
+
+      .character_main {
+          width: 320px;
+          height: 320px;
+          object-fit: contain;
+          position: absolute;
+          top: 100%;
+          transform: translateY(-100%);
+      }
+
+      @media (min-width: 960px) {
+          header {
+              padding: 40px 0 22px;
+          }
+
+          .logo-rit {
+              width: 349px;
+              height: 100px;
+          }
+
+          .introduction__cj {
+              margin-top: 20px;
+              font-size: 20px;
+              letter-spacing: -0.63px;
+          }
+
+          .introduction__kr {
+              margin-top: 10px;
+              font-size: 20px;
+              line-height: 1.5;
+              letter-spacing: -0.63px;
+          }
+
+          .newline {
+              display: none;
+          }
+
+          .sns-container {
+              margin-top: 20px;
+          }
+
+          .icon_twitter {
+              width: 48px;
+              height: 48px;
+          }
+
+          .icon_discord {
+              width: 48px;
+              height: 48px;
+          }
+
+          main {
+              height: 748px;
+          }
+
+          .coming-soon {
+              width: 450px;
+              height: 80px;
+              margin-top: 40px;
+          }
+
+          .character_main {
+              width: 640px;
+              height: 635px;
+          }
+      }
+  </style>
+</head>
+<body>
+<header>
+  <img src="img/logo-rit.png"
+       srcset="img/logo-rit@2x.png 2x,
+             img/logo-rit@3x.png 3x"
+       class="logo-rit" alt="RIT logo">
+
+  <span class="introduction__cj">
+    RITは 日韓共同のグローバルプロジェクト
+    <br class="newline">
+    KawaiiGirlNFT×DSCです<span class="fw-n">。</span>
+  </span>
+
+  <span class="introduction__kr">한일공동프로젝트인 RIT KawaiiGirlNFT×DSC입니다</span>
+
+  <div class="sns-container">
+    <a href="https://twitter.com/RiraUniversity">
+      <img src="img/icon-twitter.png"
+           srcset="img/icon-twitter@2x.png 2x,
+             img/icon-twitter@3x.png 3x"
+           class="icon_twitter" alt="Twitter icon">
+    </a>
+
+    <a href="https://discord.com/invite/4gmPmtSKqJ">
+      <img src="img/icon-discord.png"
+           srcset="img/icon-discord@2x.png 2x,
+             img/icon-discord@3x.png 3x"
+           class="icon_discord" alt="Discord icon">
+    </a>
+  </div>
+</header>
+
+<main>
+  <img src="img/text-comingsoon.png"
+       srcset="img/text-comingsoon@2x.png 2x,
+             img/text-comingsoon@3x.png 3x"
+       class="coming-soon" alt="Coming Soon">
+
+  <img src="img/section-1.png"
+       srcset="img/section-1@2x.png 2x,
+             img/section-1@3x.png 3x"
+       class="university" alt="University image">
+
+  <img src="img/RIRA.gif" class="character_main" alt="Character image">
+</main>
+</body>
+</html>
