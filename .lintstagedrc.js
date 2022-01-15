@@ -1,0 +1,15 @@
+const path = require('path')
+
+// https://nextjs.org/docs/basic-features/eslint#lint-staged
+const buildEslintCommand = (filenames) =>
+  `next lint --file ${filenames
+    .map((f) => path.relative(process.cwd(), f))
+    .join(' --file ')}`
+
+const buildPrettierCommand = (filenames) =>
+  filenames.map((filename) => `prettier --write '${filename}'`)
+
+module.exports = {
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
+  '*.{js,jsx,ts,tsx,json,css,scss,md}': [buildPrettierCommand],
+}

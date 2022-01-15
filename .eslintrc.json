@@ -1,9 +1,14 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["testing-library"],
+  "extends": [
+    "next/core-web-vitals", // https://nextjs.org/docs/basic-features/eslint
+    "prettier", // https://nextjs.org/docs/basic-features/eslint#prettier
+    "plugin:jest/recommended" // https://github.com/jest-community/eslint-plugin-jest
+  ],
+  "plugins": ["testing-library", "jest"],
   "overrides": [
     // Only uses Testing Library lint rules in test files
+    // https://github.com/testing-library/eslint-plugin-testing-library#eslint-overrides
     {
       "files": [
         "**/__tests__/**/*.[jt]s?(x)",
