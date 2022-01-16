@@ -4,7 +4,7 @@
     "prepare": "husky install",
     "dev": "next dev",
     "lint-staged": "lint-staged",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci",
@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "next": "^12.0.8",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -26,11 +28,11 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-testing-library": "5.0.1",
+    "husky": "^7.0.0",
     "jest": "27.4.5",
     "lint-staged": "^12.1.7",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
-    "typescript": "4.5.4",
-    "husky": "^7.0.0"
+    "typescript": "4.5.4"
   }
 }
