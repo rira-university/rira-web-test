@@ -1,13 +1,14 @@
 import Head from 'next/head'
-
 import styles from '@/pages/index.module.css'
+
+const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href={imagePrefix + '/favicon.ico'} />
       </Head>
 
       <main>
@@ -55,7 +56,12 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <img src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
+            <img
+              src={imagePrefix + '/vercel.svg'}
+              alt='Vercel Logo'
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
