@@ -9,7 +9,11 @@ const buildEslintCommand = (filenames) =>
 const buildPrettierCommand = (filenames) =>
   filenames.map((filename) => `prettier --write '${filename}'`)
 
+const buildStylelintCommand = (filenames) =>
+  filenames.map((filename) => `stylelint --fix '${filename}'`)
+
 module.exports = {
   '*.{js,jsx,ts,tsx}': [buildEslintCommand],
   '*.{js,jsx,ts,tsx,json,css,scss,md}': [buildPrettierCommand],
+  '*.{css,jsx,tsx}': [buildStylelintCommand],
 }
