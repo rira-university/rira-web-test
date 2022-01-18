@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import {css} from '@emotion/react'
-import Department from '../../components/sections/department'
-import TeachingAssistant from '../../components/sections/teaching-assistant'
-import Roadmap from '../../components/sections/roadmap'
-import Introduction from '../../components/sections/introduction'
-import Link from '../../components/sections/link'
-import Cover from '../../components/sections/cover'
+import Department from './sections/department'
+import TeachingAssistant from './sections/teaching-assistant'
+import Roadmap from './sections/roadmap'
+import Introduction from './sections/introduction'
+import Link from './sections/link'
+import Cover from './sections/cover'
 import {LangCode, LocalePageProps, localeContents} from '../../lib/locales'
 
-export default function Index({contents}: LocalePageProps) {
+export default function IndexPage({contents}: LocalePageProps) {
   return (
     <>
       <Head>

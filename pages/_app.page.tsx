@@ -3,8 +3,8 @@ import type {NextPage} from 'next'
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import '@/styles/global.css'
-import Footer from '@/components/footer'
-import Partners from '@/components/partners'
+import Footer from '@/pages/footer'
+import Partners from '@/pages/partners'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
