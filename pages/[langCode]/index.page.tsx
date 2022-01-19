@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import {css} from '@emotion/react'
+import Navbar from '../navbar'
 import Department from './sections/department'
 import TeachingAssistant from './sections/teaching-assistant'
 import Roadmap from './sections/roadmap'
@@ -8,7 +9,10 @@ import Link from './sections/link'
 import Cover from './sections/cover'
 import {LangCode, LocalePageProps, localeContents} from '../../lib/locales'
 
-export default function IndexPage({contents}: LocalePageProps) {
+export default function IndexPage({
+  contents,
+  currentLangCode,
+}: LocalePageProps) {
   return (
     <>
       <Head>

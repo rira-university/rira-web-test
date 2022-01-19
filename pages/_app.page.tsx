@@ -5,6 +5,7 @@ import Head from 'next/head'
 import '@/styles/global.css'
 import Footer from '@/pages/footer'
 import Partners from '@/pages/partners'
+import Navbar from '@/pages/navbar'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -25,6 +26,7 @@ export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
         <meta name='keywords' content='titla, meta, nextjs' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
+      <Navbar {...pageProps} />
       <Component {...pageProps} />
       <Partners />
       <Footer />
