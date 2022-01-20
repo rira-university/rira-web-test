@@ -2,7 +2,7 @@ import {css} from '@emotion/react'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Link() {
+export default function SitemapSection() {
   return (
     <section
       css={css`
@@ -14,6 +14,12 @@ export default function Link() {
         flex-wrap: wrap;
         padding: 60px 4px;
 
+        @media (min-width: 1024px) {
+          background-size: 40px 40px;
+          justify-content: center;
+          padding: 126px 32px;
+        }
+
         > div {
           align-items: center;
           display: flex;
@@ -22,10 +28,26 @@ export default function Link() {
 
           &:nth-of-type(n + 3) {
             margin-top: 20px;
+
+            @media (min-width: 1024px) {
+              margin-top: 0;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            flex: inherit;
+
+            &:not(:first-of-type) {
+              margin-left: 32px;
+            }
           }
 
           img {
             width: 120px;
+
+            @media (min-width: 1024px) {
+              width: 240px;
+            }
           }
 
           span {
@@ -36,21 +58,40 @@ export default function Link() {
             line-height: normal;
             margin-top: 10px;
             text-align: center;
+
+            @media (min-width: 1024px) {
+              font-size: 40px;
+              letter-spacing: -1.25px;
+              margin-top: 20px;
+            }
           }
         }
       `}
     >
       <div css={css``}>
-        <img src={imagePrefix + '/link-home.png'} alt='Home' css={css``} />
-        <span css={css``}>HOME</span>
+        <a href='#'>
+          <img src={imagePrefix + '/link-home.png'} alt='Home' css={css``} />
+        </a>
+        <a
+          href='#'
+          css={css`
+            margin-top: 0;
+
+            @media (min-width: 1024px) {
+              margin-top: 20px;
+            }
+          `}
+        >
+          <span css={css``}>HOME</span>
+        </a>
       </div>
       <div css={css``}>
         <img src={imagePrefix + '/link-tomoz.png'} alt='Tomoz' css={css``} />
-        <span css={css``}>TOMOZ</span>
+        <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
         <img src={imagePrefix + '/link-lab.png'} alt='Lab' css={css``} />
-        <span css={css``}>LAB</span>
+        <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
         <img

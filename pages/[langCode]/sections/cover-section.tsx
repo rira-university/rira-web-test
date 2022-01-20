@@ -2,7 +2,7 @@ import {css} from '@emotion/react'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Cover() {
+export default function CoverSection() {
   return (
     <section
       css={css`
@@ -12,6 +12,10 @@ export default function Cover() {
         padding: 50px 15px 0;
         position: relative;
         z-index: 0;
+
+        @media (min-width: 1024px) {
+          padding-top: 92px;
+        }
       `}
     >
       <h1
@@ -22,6 +26,12 @@ export default function Cover() {
           letter-spacing: -0.63px;
           line-height: 1.5;
           text-align: center;
+
+          @media (min-width: 1024px) {
+            font-size: 40px;
+            letter-spacing: -1.25px;
+            line-height: normal;
+          }
         `}
       >
         Rira Institute of Technology
@@ -30,10 +40,14 @@ export default function Cover() {
         src={imagePrefix + '/title-kr.png'}
         alt=''
         css={css`
-          height: 100px;
           margin-top: 10px;
           object-fit: contain;
           width: 290px;
+
+          @media (min-width: 1024px) {
+            margin-top: 20px;
+            width: 580px;
+          }
         `}
       />
       <img
@@ -52,60 +66,83 @@ export default function Cover() {
         css={css`
           align-items: flex-end;
           display: flex;
+
+          @media (min-width: 1024px) {
+            margin-top: -40px;
+          }
         `}
       >
         <img
           src={imagePrefix + '/character-sub-04.png'}
           alt=''
           css={css`
-            height: 144px;
             margin-right: -90px;
             position: relative;
             width: 144px;
             z-index: 0;
+
+            @media (min-width: 1024px) {
+              margin-right: -230px;
+              width: 360px;
+            }
           `}
         />
         <img
           src={imagePrefix + '/character-sub-02.png'}
           alt=''
           css={css`
-            height: 180px;
             position: relative;
             width: 180px;
             z-index: 1;
+
+            @media (min-width: 1024px) {
+              width: 460px;
+            }
           `}
         />
         <img
           src={imagePrefix + '/character-main.png'}
           alt=''
           css={css`
-            height: 260px;
             margin-left: -100px;
             margin-right: -100px;
             position: relative;
             width: 260px;
             z-index: 2;
+
+            @media (min-width: 1024px) {
+              margin-left: -250px;
+              margin-right: -250px;
+              width: 640px;
+            }
           `}
         />
         <img
           src={imagePrefix + '/character-sub-01.png'}
           alt=''
           css={css`
-            height: 180px;
             position: relative;
             width: 180px;
             z-index: 1;
+
+            @media (min-width: 1024px) {
+              width: 460px;
+            }
           `}
         />
         <img
           src={imagePrefix + '/character-sub-03.png'}
           alt=''
           css={css`
-            height: 144px;
             margin-left: -90px;
             position: relative;
             width: 144px;
             z-index: 0;
+
+            @media (min-width: 1024px) {
+              margin-left: -230px;
+              width: 360px;
+            }
           `}
         />
       </div>

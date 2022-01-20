@@ -2,12 +2,16 @@ import {css} from '@emotion/react'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Partners() {
+export default function PartnersSection() {
   return (
     <section
       css={css`
         background-color: #ffd0c5;
         padding: 60px 0;
+
+        @media (min-width: 1024px) {
+          padding: 80px 0 108px;
+        }
       `}
     >
       <h2
@@ -18,6 +22,12 @@ export default function Partners() {
           letter-spacing: -0.75px;
           line-height: 1.25;
           text-align: center;
+
+          @media (min-width: 1024px) {
+            font-size: 60px;
+            letter-spacing: -1.88px;
+            line-height: 1.2;
+          }
         `}
       >
         Partners
@@ -31,6 +41,12 @@ export default function Partners() {
           line-height: 1.25;
           margin-top: 10px;
           text-align: center;
+
+          @media (min-width: 1024px) {
+            font-size: 30px;
+            letter-spacing: -0.94px;
+            line-height: 1.33;
+          }
         `}
       >
         KawaiiGirlNFT x Doge Sound Club
@@ -41,6 +57,10 @@ export default function Partners() {
           display: flex;
           justify-content: center;
           margin-top: 20px;
+
+          @media (min-width: 1024px) {
+            margin-top: 30px;
+          }
         `}
       >
         <img
@@ -48,6 +68,10 @@ export default function Partners() {
           alt='Rira logo'
           css={css`
             width: 120px;
+
+            @media (min-width: 1024px) {
+              width: 300px;
+            }
           `}
         />
         <img
@@ -56,6 +80,10 @@ export default function Partners() {
           css={css`
             margin-left: 8px;
             width: 24px;
+
+            @media (min-width: 1024px) {
+              margin-left: 30px;
+            }
           `}
         />
         <img
@@ -64,6 +92,11 @@ export default function Partners() {
           css={css`
             margin-left: 8px;
             width: 120px;
+
+            @media (min-width: 1024px) {
+              margin-left: 30px;
+              width: 300px;
+            }
           `}
         />
       </div>

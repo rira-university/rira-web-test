@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import {css} from '@emotion/react'
-import Navbar from '../navbar'
-import Department from './sections/department'
-import TeachingAssistant from './sections/teaching-assistant'
-import Roadmap from './sections/roadmap'
-import Introduction from './sections/introduction'
-import Link from './sections/link'
-import Cover from './sections/cover'
+import CoverSection from './sections/cover-section'
+import IntroductionSection from './sections/introduction-section'
+import SitemapSection from './sections/sitemap-section'
+import DepartmentSection from './sections/department-section'
+import TaSection from './sections/ta-section'
+import RoadmapSection from './sections/roadmap-section'
 import {LangCode, LocalePageProps, localeContents} from '../../lib/locales'
 
 export default function IndexPage({
@@ -24,12 +23,12 @@ export default function IndexPage({
           overflow: hidden;
         `}
       >
-        <Cover />
-        <Introduction />
-        <Link />
-        <Department />
-        <TeachingAssistant />
-        <Roadmap />
+        <CoverSection />
+        <IntroductionSection />
+        <SitemapSection />
+        <DepartmentSection />
+        <TaSection />
+        <RoadmapSection />
       </main>
     </>
   )

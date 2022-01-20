@@ -3,8 +3,8 @@ import type {NextPage} from 'next'
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import '@/styles/global.css'
+import PartnersSection from '@/pages/partners-section'
 import Footer from '@/pages/footer'
-import Partners from '@/pages/partners'
 import Navbar from '@/pages/navbar'
 
 type NextPageWithLayout = NextPage & {
@@ -28,7 +28,7 @@ export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
       </Head>
       <Navbar {...pageProps} />
       <Component {...pageProps} />
-      <Partners />
+      <PartnersSection />
       <Footer />
     </>,
   )
