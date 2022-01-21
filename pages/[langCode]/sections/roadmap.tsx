@@ -1,8 +1,12 @@
 import {css} from '@emotion/react'
+import {LocalePageProps} from '../../../common/lib/locales'
+import contents from './roadmap.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function RoadmapSection() {
+export default function Roadmap({currentLangCode}: LocalePageProps) {
+  const content = contents[currentLangCode]
+
   return (
     <section
       css={css`
@@ -142,33 +146,28 @@ export default function RoadmapSection() {
           `}
         >
           <div>
-            <h3>대학 준공</h3>
-            <p>커뮤니티를 기반으로, RIT 웹이 개설됩니다.</p>
+            <h3>{content.step1.name}</h3>
+            <p>{content.step1.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Arrow' />
+          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
           <div>
-            <h3>학생증 발급</h3>
-            <p>
-              민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다.
-            </p>
+            <h3>{content.step2.name}</h3>
+            <p>{content.step2.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Arrow' />
+          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
           <div>
-            <h3>학사 과정</h3>
-            <p>퀘스트를 완수하여 학사 과정을 이수합니다.</p>
+            <h3>{content.step3.name}</h3>
+            <p>{content.step3.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Arrow' />
+          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
           <div>
-            <h3>수료</h3>
-            <p>
-              학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할
-              수 있습니다.
-            </p>
+            <h3>{content.step4.name}</h3>
+            <p>{content.step4.description}</p>
           </div>
         </div>
         <img
           src={imagePrefix + '/img-computer.png'}
-          alt='Computer image'
+          alt=''
           css={css`
             display: none;
             position: absolute;
@@ -198,7 +197,7 @@ export default function RoadmapSection() {
 
       <img
         src={imagePrefix + '/img-desk.png'}
-        alt='An image for background'
+        alt=''
         css={css`
           bottom: 8px;
           object-fit: cover;

@@ -1,0 +1,77 @@
+{
+  "en": {
+    "title": "당신은 어떤 TOMOZ가 됩니까?",
+    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
+    "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
+    "financialEngineering": {
+      "title": "금융공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "aerospaceEngineering": {
+      "title": "우주공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "computerEngineering": {
+      "title": "컴퓨터공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "chemistry": {
+      "title": "화학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "electricalEngineering": {
+      "title": "전자과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    }
+  },
+  "jp": {
+    "title": "당신은 어떤 TOMOZ가 됩니까?",
+    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
+    "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
+    "financialEngineering": {
+      "title": "금융공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "aerospaceEngineering": {
+      "title": "우주공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "computerEngineering": {
+      "title": "컴퓨터공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "chemistry": {
+      "title": "화학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "electricalEngineering": {
+      "title": "전자과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    }
+  },
+  "kr": {
+    "title": "당신은 어떤 TOMOZ가 됩니까?",
+    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
+    "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
+    "financialEngineering": {
+      "title": "금융공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "aerospaceEngineering": {
+      "title": "우주공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "computerEngineering": {
+      "title": "컴퓨터공학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "chemistry": {
+      "title": "화학과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    },
+    "electricalEngineering": {
+      "title": "전자과",
+      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+    }
+  }
+}

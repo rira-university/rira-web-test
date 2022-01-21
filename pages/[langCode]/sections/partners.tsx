@@ -1,8 +1,12 @@
 import {css} from '@emotion/react'
+import {LocalePageProps} from '../../../common/lib/locales'
+import contents from './partners.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function PartnersSection() {
+export default function Partners({currentLangCode}: LocalePageProps) {
+  const content = contents[currentLangCode]
+
   return (
     <section
       css={css`
@@ -30,7 +34,7 @@ export default function PartnersSection() {
           }
         `}
       >
-        Partners
+        {content.title}
       </h2>
       <p
         css={css`

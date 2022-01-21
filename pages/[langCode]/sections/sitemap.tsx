@@ -2,7 +2,7 @@ import {css} from '@emotion/react'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function SitemapSection() {
+export default function Sitemap() {
   return (
     <section
       css={css`
@@ -70,7 +70,11 @@ export default function SitemapSection() {
     >
       <div css={css``}>
         <a href='#'>
-          <img src={imagePrefix + '/link-home.png'} alt='Home' css={css``} />
+          <img
+            src={imagePrefix + '/link-home.png'}
+            alt='Go to Home'
+            css={css``}
+          />
         </a>
         <a
           href='#'
@@ -86,11 +90,15 @@ export default function SitemapSection() {
         </a>
       </div>
       <div css={css``}>
-        <img src={imagePrefix + '/link-tomoz.png'} alt='Tomoz' css={css``} />
+        <img
+          src={imagePrefix + '/link-tomoz.png'}
+          alt='Go to Tomoz'
+          css={css``}
+        />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
-        <img src={imagePrefix + '/link-lab.png'} alt='Lab' css={css``} />
+        <img src={imagePrefix + '/link-lab.png'} alt='Go to Lab' css={css``} />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>

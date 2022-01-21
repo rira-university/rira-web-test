@@ -1,8 +1,12 @@
 import {css} from '@emotion/react'
+import {LocalePageProps} from '../../../common/lib/locales'
+import contents from './department.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function DepartmentSection() {
+export default function Department({currentLangCode}: LocalePageProps) {
+  const content = contents[currentLangCode]
+
   return (
     <section
       css={css`
@@ -36,7 +40,7 @@ export default function DepartmentSection() {
       >
         <img
           src={imagePrefix + '/img-rira-postit.png'}
-          alt='Rira post-it'
+          alt=''
           css={css`
             width: 100%;
 
@@ -49,6 +53,9 @@ export default function DepartmentSection() {
         />
         <div
           css={css`
+            display: flex;
+            flex-direction: column;
+
             @media (min-width: 1024px) {
               margin-left: 40px;
             }
@@ -73,24 +80,6 @@ export default function DepartmentSection() {
             }
           `}
         >
-          <p
-            css={css`
-              margin-bottom: 10px;
-              margin-top: 10px;
-
-              @media (min-width: 1024px) {
-                margin-bottom: 20px;
-                margin-top: 0;
-              }
-            `}
-          >
-            그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계
-            각국으로부터 모인 우수한 대학생이 있습니다.
-          </p>
-          <p css={css``}>
-            메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는
-            고등학생도 있는 것 같습니다.
-          </p>
           <h2
             css={css`
               color: #000;
@@ -99,6 +88,7 @@ export default function DepartmentSection() {
               letter-spacing: -0.75px;
               line-height: 1.25;
               margin-top: 20px;
+              order: 1;
               padding: 0 20px;
               text-align: center;
 
@@ -110,8 +100,22 @@ export default function DepartmentSection() {
               }
             `}
           >
-            당신은 어떤 TOMOZ가 됩니까?
+            {content.title}
           </h2>
+          <p
+            css={css`
+              margin-bottom: 10px;
+              margin-top: 10px;
+
+              @media (min-width: 1024px) {
+                margin-bottom: 20px;
+                margin-top: 0;
+              }
+            `}
+          >
+            {content.paragraph1}
+          </p>
+          <p css={css``}>{content.paragraph2}</p>
         </div>
       </div>
       <div
@@ -196,11 +200,8 @@ export default function DepartmentSection() {
           `}
         >
           <img src={imagePrefix + '/img-class-finance.png'} alt='' />
-          <h3>금융공학과</h3>
-          <p>
-            그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을
-            대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?
-          </p>
+          <h3>{content.financialEngineering.title}</h3>
+          <p>{content.financialEngineering.description}</p>
         </div>
         <div
           css={css`
@@ -212,11 +213,8 @@ export default function DepartmentSection() {
           `}
         >
           <img src={imagePrefix + '/img-class-space.png'} alt='' />
-          <h3>우주공학과</h3>
-          <p>
-            그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을
-            대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?
-          </p>
+          <h3>{content.aerospaceEngineering.title}</h3>
+          <p>{content.aerospaceEngineering.description}</p>
         </div>
         <div
           css={css`
@@ -228,11 +226,8 @@ export default function DepartmentSection() {
           `}
         >
           <img src={imagePrefix + '/img-class-computer.png'} alt='' />
-          <h3>컴퓨터공학과</h3>
-          <p>
-            그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을
-            대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?
-          </p>
+          <h3>{content.computerEngineering.title}</h3>
+          <p>{content.computerEngineering.description}</p>
         </div>
         <div
           css={css`
@@ -244,11 +239,8 @@ export default function DepartmentSection() {
           `}
         >
           <img src={imagePrefix + '/img-class-chemistry.png'} alt='' />
-          <h3>화학과</h3>
-          <p>
-            그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을
-            대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?
-          </p>
+          <h3>{content.chemistry.title}</h3>
+          <p>{content.chemistry.description}</p>
         </div>
         <div
           css={css`
@@ -260,16 +252,13 @@ export default function DepartmentSection() {
           `}
         >
           <img src={imagePrefix + '/img-class-electric.png'} alt='' />
-          <h3>전자과</h3>
-          <p>
-            그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을
-            대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?
-          </p>
+          <h3>{content.electricalEngineering.title}</h3>
+          <p>{content.electricalEngineering.description}</p>
         </div>
       </div>
       <img
         src={imagePrefix + '/bg-section-04.png'}
-        alt='An image for background'
+        alt=''
         css={css`
           height: 100%;
           object-fit: cover;

@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import Link from 'next/link'
 import {css} from '@emotion/react'
-import {LangCode, LocalePageProps} from '../lib/locales'
+import {LangCode, LocalePageProps} from '../common/lib/locales'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Navbar({contents, currentLangCode}: LocalePageProps) {
+export default function Navbar({currentLangCode}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
 
   return (

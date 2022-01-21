@@ -1,21 +1,30 @@
 import Head from 'next/head'
 import {css} from '@emotion/react'
-import CoverSection from './sections/cover-section'
-import IntroductionSection from './sections/introduction-section'
-import SitemapSection from './sections/sitemap-section'
-import DepartmentSection from './sections/department-section'
-import TaSection from './sections/ta-section'
-import RoadmapSection from './sections/roadmap-section'
-import {LangCode, LocalePageProps, localeContents} from '../../lib/locales'
+import Cover from './sections/cover'
+import Introduction from './sections/introduction'
+import Sitemap from './sections/sitemap'
+import Department from './sections/department'
+import TeachingAssistant from './sections/teaching-assistant'
+import Roadmap from './sections/roadmap'
+import {LangCode, LocalePageProps} from '../../common/lib/locales'
+import Partners from '@/pages/[langCode]/sections/partners'
 
-export default function IndexPage({
-  contents,
-  currentLangCode,
-}: LocalePageProps) {
+export default function IndexPage(localePageProps: LocalePageProps) {
+  const {currentLangCode} = localePageProps
+
   return (
     <>
       <Head>
-        <title>{contents.index.title}</title>
+        {Object.values(LangCode)
+          .filter((langCode) => langCode !== currentLangCode)
+          .map((langCode) => (
+            <link
+              key={langCode}
+              rel='alternate'
+              hrefLang={langCode}
+              href={`https://rira.university/${langCode}`}
+            />
+          ))}
       </Head>
 
       <main
@@ -23,12 +32,13 @@ export default function IndexPage({
           overflow: hidden;
         `}
       >
-        <CoverSection />
-        <IntroductionSection />
-        <SitemapSection />
-        <DepartmentSection />
-        <TaSection />
-        <RoadmapSection />
+        <Cover {...localePageProps} />
+        <Introduction {...localePageProps} />
+        <Sitemap />
+        <Department {...localePageProps} />
+        <TeachingAssistant {...localePageProps} />
+        <Roadmap {...localePageProps} />
+        <Partners {...localePageProps} />
       </main>
     </>
   )
@@ -52,7 +62,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({params}: {params: {langCode: LangCode}}) {
   return {
     props: {
-      contents: localeContents[params.langCode] || localeContents[LangCode.En],
       currentLangCode: params.langCode,
     },
   }

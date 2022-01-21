@@ -1,11 +1,10 @@
 import type {ReactElement, ReactNode} from 'react'
 import type {NextPage} from 'next'
 import type {AppProps} from 'next/app'
-import Head from 'next/head'
-import '@/styles/global.css'
-import PartnersSection from '@/pages/partners-section'
-import Footer from '@/pages/footer'
+import Head from '@/pages/head'
 import Navbar from '@/pages/navbar'
+import Footer from '@/pages/footer'
+import '@/styles/global.css'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -20,15 +19,9 @@ export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
 
   return getLayout(
     <>
-      <Head>
-        <link rel='icon' href='/favicon.ico' />
-        <meta charSet='UTF-8' />
-        <meta name='keywords' content='titla, meta, nextjs' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      </Head>
+      <Head {...pageProps} />
       <Navbar {...pageProps} />
       <Component {...pageProps} />
-      <PartnersSection />
       <Footer />
     </>,
   )

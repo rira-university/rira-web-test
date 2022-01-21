@@ -1,8 +1,12 @@
 import {css} from '@emotion/react'
+import {LocalePageProps} from '../../../common/lib/locales'
+import contents from './cover.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function CoverSection() {
+export default function Cover({currentLangCode}: LocalePageProps) {
+  const content = contents[currentLangCode]
+
   return (
     <section
       css={css`
@@ -34,11 +38,11 @@ export default function CoverSection() {
           }
         `}
       >
-        Rira Institute of Technology
+        {content.title}
       </h1>
       <img
-        src={imagePrefix + '/title-kr.png'}
-        alt=''
+        src={imagePrefix + `/title-${currentLangCode}.png`}
+        alt={content.welcomeImageAlt}
         css={css`
           margin-top: 10px;
           object-fit: contain;

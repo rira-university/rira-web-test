@@ -1,0 +1,59 @@
+{
+  "en": {
+    "title": "Roadmap",
+    "step1": {
+      "name": "대학 준공",
+      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+    },
+    "step2": {
+      "name": "학생증 발급",
+      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+    },
+    "step3": {
+      "name": "학사 과정",
+      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+    },
+    "step4": {
+      "name": "수료",
+      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+    }
+  },
+  "jp": {
+    "title": "Roadmap",
+    "step1": {
+      "name": "대학 준공",
+      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+    },
+    "step2": {
+      "name": "학생증 발급",
+      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+    },
+    "step3": {
+      "name": "학사 과정",
+      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+    },
+    "step4": {
+      "name": "수료",
+      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+    }
+  },
+  "kr": {
+    "title": "Roadmap",
+    "step1": {
+      "name": "대학 준공",
+      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+    },
+    "step2": {
+      "name": "학생증 발급",
+      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+    },
+    "step3": {
+      "name": "학사 과정",
+      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+    },
+    "step4": {
+      "name": "수료",
+      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+    }
+  }
+}

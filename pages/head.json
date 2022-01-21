@@ -1,0 +1,23 @@
+{
+  "en": {
+    "title": "Welcome to Rira Institute of Technology!",
+    "description": "Welcome to Rira Institute of Technology!.",
+    "keywords": ["Rira", "RIT", "Rira Institute of Technology"]
+  },
+  "jp": {
+    "title": "リラ工科大学へようこそ！",
+    "description": "リラ工科大学へようこそ！ 블록체인 위에 세워진 세계 최초의 대학에서 여러분의 꿈을 펼치세요.",
+    "keywords": ["Rira", "RIT", "Rira Institute of Technology"]
+  },
+  "kr": {
+    "title": "리라 공과대학에 어서오세요!",
+    "description": "이곳은 리라 공과대학입니다. 블록체인 위에 세워진 세계 최초의 대학에서 여러분의 꿈을 펼치세요.",
+    "keywords": [
+      "Rira",
+      "RIT",
+      "Rira Institute of Technology",
+      "리라",
+      "리라 공과대학"
+    ]
+  }
+}

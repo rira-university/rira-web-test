@@ -1,8 +1,12 @@
 import {css} from '@emotion/react'
+import {LocalePageProps} from '../../../common/lib/locales'
+import contents from './teaching-assistant.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function TaSection() {
+export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
+  const content = contents[currentLangCode]
+
   return (
     <section
       css={css`
@@ -45,7 +49,7 @@ export default function TaSection() {
         </h2>
         <img
           src={imagePrefix + '/img-header.png'}
-          alt='Teaching Assistant'
+          alt=''
           css={css`
             width: 300px;
 
@@ -147,62 +151,44 @@ export default function TaSection() {
       >
         <div css={css``}>
           <img src={imagePrefix + '/img-team1.png'} alt='Team 1' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta1.name}</h3>
+          <p>{content.ta1.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
         <div css={css``}>
           <img src={imagePrefix + '/img-team2.png'} alt='Team 2' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta2.name}</h3>
+          <p>{content.ta2.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
         <div css={css``}>
           <img src={imagePrefix + '/img-team3.png'} alt='Team 3' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta3.name}</h3>
+          <p>{content.ta3.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
         <div css={css``}>
           <img src={imagePrefix + '/img-team4.png'} alt='Team 4' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta4.name}</h3>
+          <p>{content.ta4.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
         <div css={css``}>
           <img src={imagePrefix + '/img-team5.png'} alt='Team 5' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta5.name}</h3>
+          <p>{content.ta5.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
         <div css={css``}>
           <img src={imagePrefix + '/img-team6.png'} alt='Team 6' />
-          <h3>사람1</h3>
-          <p>
-            문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시
-            문장길이예시 문장길이예시 문장길이예시
-          </p>
+          <h3>{content.ta6.name}</h3>
+          <p>{content.ta6.description}</p>
           <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
         </div>
       </div>
       <img
         src={imagePrefix + '/bg-section-05.png'}
-        alt='An image for background'
+        alt=''
         css={css`
           bottom: 0;
           object-fit: contain;
