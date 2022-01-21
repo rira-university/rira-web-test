@@ -1,4 +1,5 @@
 import {css} from '@emotion/react'
+import {balooDa2} from '../../../common/utils/font-loader'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -52,7 +53,7 @@ export default function Sitemap() {
 
           span {
             color: #000;
-            font-family: BalooDa, sans-serif;
+            font-family: ${balooDa2}, sans-serif;
             font-size: 20px;
             letter-spacing: -0.63px;
             line-height: normal;

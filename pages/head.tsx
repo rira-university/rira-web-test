@@ -18,6 +18,7 @@ export default function MyHead({currentLangCode}: LocalePageProps) {
         hrefLang='x-default'
         href='https://rira.university/en'
       />
+      {/*<style>{getFontFaces(currentLangCode).join('')}</style>*/}
     </Head>
   )
 }

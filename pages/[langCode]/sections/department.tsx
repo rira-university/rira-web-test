@@ -1,5 +1,6 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
+import {oneMobilePop, oneMobileRegular} from '../../../common/utils/font-loader'
 import contents from './department.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -62,7 +63,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
 
             > p {
               color: #000;
-              font-family: ONEMobileOTF, sans-serif;
+              font-family: ${oneMobileRegular}, sans-serif;
               font-size: 12px;
               font-weight: bold;
               letter-spacing: -0.38px;
@@ -83,7 +84,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
           <h2
             css={css`
               color: #000;
-              font-family: ONEMobilePOPOTF, sans-serif;
+              font-family: ${oneMobilePop}, sans-serif;
               font-size: 24px;
               letter-spacing: -0.75px;
               line-height: 1.25;
@@ -155,7 +156,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
 
             h3 {
               color: #1e1e1e;
-              font-family: ONEMobilePOPOTF, sans-serif;
+              font-family: ${oneMobilePop}, sans-serif;
               font-size: 24px;
               letter-spacing: -0.75px;
               line-height: 1.25;
@@ -170,7 +171,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
 
             p {
               color: #000;
-              font-family: ONEMobileOTF, sans-serif;
+              font-family: ${oneMobileRegular}, sans-serif;
               font-size: 12px;
               font-weight: bold;
               letter-spacing: -0.38px;

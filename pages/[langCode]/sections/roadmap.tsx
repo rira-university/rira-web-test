@@ -1,5 +1,6 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
+import {oneMobilePop, oneMobileRegular} from '../../../common/utils/font-loader'
 import contents from './roadmap.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -30,7 +31,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
       <h2
         css={css`
           color: #000;
-          font-family: ONEMobilePOPOTF, sans-serif;
+          font-family: ${oneMobilePop}, sans-serif;
           font-size: 24px;
           letter-spacing: -0.75px;
           line-height: 1.25;
@@ -94,7 +95,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
                 border-radius: 6px;
                 color: #fff;
                 display: flex;
-                font-family: ONEMobilePOPOTF, sans-serif;
+                font-family: ${oneMobilePop}, sans-serif;
                 font-size: 20px;
                 height: 36px;
                 justify-content: center;
@@ -116,7 +117,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
 
               > p {
                 color: #000;
-                font-family: ONEMobileOTF, sans-serif;
+                font-family: ${oneMobileRegular}, sans-serif;
                 font-size: 12px;
                 font-weight: bold;
                 letter-spacing: -0.38px;

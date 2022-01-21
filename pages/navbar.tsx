@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Link from 'next/link'
 import {css} from '@emotion/react'
 import {LangCode, LocalePageProps} from '../common/lib/locales'
+import {baloo2, balooDa2} from '../common/utils/font-loader'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -125,7 +126,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             }
 
             > a {
-              font-family: Baloo, sans-serif;
+              font-family: ${baloo2}, sans-serif;
               font-size: 24px;
               height: 48px;
               letter-spacing: -0.75px;
@@ -175,7 +176,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
                   color: ${langCode === currentLangCode
                     ? '#969696'
                     : '#c8c8c8'};
-                  font-family: BalooDa, sans-serif;
+                  font-family: ${balooDa2}, sans-serif;
                   font-size: 24px;
                   letter-spacing: -0.75px;
 

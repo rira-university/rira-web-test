@@ -1,5 +1,6 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
+import {oneMobilePop} from '../../../common/utils/font-loader'
 import contents from './partners.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -21,7 +22,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
       <h2
         css={css`
           color: #000;
-          font-family: ONEMobilePOPOTF, sans-serif;
+          font-family: ${oneMobilePop}, sans-serif;
           font-size: 24px;
           letter-spacing: -0.75px;
           line-height: 1.25;
@@ -39,7 +40,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
       <p
         css={css`
           color: #ff866b;
-          font-family: ONEMobilePOPOTF, sans-serif;
+          font-family: ${oneMobilePop}, sans-serif;
           font-size: 16px;
           letter-spacing: -0.5px;
           line-height: 1.25;

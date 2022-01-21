@@ -1,5 +1,6 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
+import {balooDa2} from '../../../common/utils/font-loader'
 import contents from './cover.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -25,7 +26,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
       <h1
         css={css`
           color: #000;
-          font-family: Baloo, sans-serif;
+          font-family: ${balooDa2}, sans-serif;
           font-size: 20px;
           letter-spacing: -0.63px;
           line-height: 1.5;
