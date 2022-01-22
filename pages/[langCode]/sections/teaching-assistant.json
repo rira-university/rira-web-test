@@ -2,82 +2,94 @@
   "en": {
     "title": "Teaching Assistant",
     "ta1": {
-      "name": "사람1",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Tommy",
+      "description": "He is the head of the Japan team and the first Vice President of RIRA Institute of Technology."
     },
     "ta2": {
-      "name": "사람2",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Ame-chan",
+      "description": "The student director of RIT the person who drew TOMOZ."
     },
     "ta3": {
-      "name": "사람3",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Gumi-chan",
+      "description": "Director of the Overseas Cooperation Center at RIT and is in charge of publicity and overseas communications."
     },
     "ta4": {
-      "name": "사람4",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Mick",
+      "description": "He leads Korean Team. He secretly aims for the position of the Vice President."
     },
     "ta5": {
-      "name": "사람5",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Doge",
+      "description": "He fixes all of the computers of RIT. He works on the blockchain."
     },
     "ta6": {
-      "name": "사람6",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Arvitor",
+      "description": "He is the head of the NFTcircle. He is a pioneer in NFT World and advertise NFTs."
+    },
+    "ta7": {
+      "name": "Luluralo",
+      "description": "I am a guard of RIT. Trust me and RIT's safety."
     }
   },
   "jp": {
     "title": "Teaching Assistant",
     "ta1": {
-      "name": "사람1",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Tommy",
+      "description": "RIT日本チーム長であり、副学長として働いています。"
     },
     "ta2": {
-      "name": "사람2",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Ame-chan",
+      "description": "RITの学生センター長として勤めており、TOMOZを描いた張本人です。"
     },
     "ta3": {
-      "name": "사람3",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Gumi-chan",
+      "description": "海外協力センター長です。大学の広報や海外発信をしています。"
     },
     "ta4": {
-      "name": "사람4",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Mick",
+      "description": "RITの韓国チーム長です。副学長になるという野望があります。"
     },
     "ta5": {
-      "name": "사람5",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Doge",
+      "description": "RITパソコン工学科出身で、彼は大学に存在するすべてのパソコンを直します。"
     },
     "ta6": {
-      "name": "사람6",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Arvitor",
+      "description": "RITのNFT収集サークル長です。NFTの魅力を知らせることで先頭に立ています。"
+    },
+    "ta7": {
+      "name": "Luluralo",
+      "description": "RITの警備所長です。RITの治安は僕に任してください。"
     }
   },
   "kr": {
     "title": "Teaching Assistant",
     "ta1": {
-      "name": "사람1",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Tommy",
+      "description": "RIT의 일본 팀장이자 부총장님입니다. TOMOZ 커뮤티니를 유지하고 있습니다."
     },
     "ta2": {
-      "name": "사람2",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Ame-chan",
+      "description": "RIT의 학생처장입니다. TOMOZ 컬렉션을 그려주었습니다."
     },
     "ta3": {
-      "name": "사람3",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Gumi-chan",
+      "description": "RIT의 해외 협력 센터장입니다. 대학의 홍보나 해외 발신을 하고 있습니다."
     },
     "ta4": {
-      "name": "사람4",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Mick",
+      "description": "RIT의 한국 팀장이자 교직원입니다. 부총장직을 노리고 있습니다."
     },
     "ta5": {
-      "name": "사람5",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Doge",
+      "description": "RIT의 컴퓨터 수리기사입니다. 블록체인 위에서 노동을 하고 있습니다."
     },
     "ta6": {
-      "name": "사람6",
-      "description": "문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시 문장길이예시"
+      "name": "Arvitor",
+      "description": "RIT의 NFT수집동아리장입니다. NFT의 매력을 알리는데 앞장서고 있습니다."
+    },
+    "ta7": {
+      "name": "Luluralo",
+      "description": "RIT의 경비소장입니다. RIT치안은 저에게 맞겨주세요."
     }
   }
 }

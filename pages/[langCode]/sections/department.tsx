@@ -28,6 +28,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
           border: solid 2px #000;
           border-radius: 24px;
           box-shadow: 0 10px 0 0 #f8c558;
+          padding-bottom: 40px;
           width: 280px;
 
           @media (min-width: 1024px) {
@@ -35,6 +36,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
             box-shadow: 20px 20px 0 0 #f8c558;
             display: flex;
             height: 480px;
+            padding-bottom: 0;
             width: 864px;
           }
         `}
@@ -59,6 +61,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
 
             @media (min-width: 1024px) {
               margin-left: 40px;
+              padding-right: 20px;
             }
 
             > p {
@@ -98,6 +101,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
                 letter-spacing: -0.94px;
                 line-height: 1.47;
                 padding: 0;
+                text-align: left;
               }
             `}
           >
@@ -203,6 +207,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
               line-height: 1.67;
               margin-bottom: 40px;
               margin-top: 10px;
+              padding: 0 20px;
               text-align: center;
 
               @media (min-width: 1024px) {

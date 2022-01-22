@@ -1,77 +1,77 @@
 {
   "en": {
-    "title": "당신은 어떤 TOMOZ가 됩니까?",
-    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
-    "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
+    "title": "Which TOMOZ would you like to be?",
+    "paragraph1": "We call those who join this University TOMOZ.",
+    "paragraph2": "Within these superior students, there are unique people such as those who work in maid cafes, or a high school students who came to visit the University.",
     "financialEngineering": {
-      "title": "금융공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "Department of Financial Engineering",
+      "description": "Researching Subject about MIX which is the largest source in RIT"
     },
     "aerospaceEngineering": {
-      "title": "우주공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "Department of Space Engineering",
+      "description": "Studying how to use MIX in space"
     },
     "computerEngineering": {
-      "title": "컴퓨터공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "Department of Computer Science and Engineering",
+      "description": "Studying blockchain science at RIRA University"
     },
     "chemistry": {
-      "title": "화학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "Department of Chemical Engineering",
+      "description": "Researching how to use MIX in the physical world"
     },
     "electricalEngineering": {
-      "title": "전자과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "Department of Electronic Engineering",
+      "description": "Researching the basis for creating MIX"
     }
   },
   "jp": {
-    "title": "당신은 어떤 TOMOZ가 됩니까?",
-    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
-    "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
+    "title": "貴方はどんなTOMOZになりたいですか？",
+    "paragraph1": "この大学に集う彼らを我々はTOMOZと呼んでいます。",
+    "paragraph2": "世界各国からの優秀な大学生の中には、メイドカフェでバイトをしている学生や、大学に見学に来た高校生など、ユニークな人たちもいるみたいです。",
     "financialEngineering": {
-      "title": "금융공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "金融工学科",
+      "description": "RITの中心資産であるMIXの金融工学を研究する学科"
     },
     "aerospaceEngineering": {
-      "title": "우주공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "宇宙工学科",
+      "description": "宇宙に進出し月でミックスを使用する方法を研究する学科"
     },
     "computerEngineering": {
-      "title": "컴퓨터공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "パソコン工学科",
+      "description": "MIXの根本であるブロックチェーンを研究し、故障したパソコンを直してくれる学科"
     },
     "chemistry": {
-      "title": "화학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "化学科",
+      "description": "MIXを化学的に活用した合成製品を研究する学科"
     },
     "electricalEngineering": {
-      "title": "전자과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "title": "電子科",
+      "description": "MIXを電荷単位から分析しMIXの生産量増大を研究する学科"
     }
   },
   "kr": {
     "title": "당신은 어떤 TOMOZ가 됩니까?",
-    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계 각국으로부터 모인 우수한 대학생이 있습니다.",
+    "paragraph1": "그들을 대학에서는 TOMOZ라고 부르고 있습니다. 여기에는 세계각국으로부터 모인 우수한 대학생이 있습니다.",
     "paragraph2": "메이드 카페로 바이트하고 있는 아이나 대학의 견학에 와 있는 고등학생도 있는 것 같습니다.",
     "financialEngineering": {
       "title": "금융공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "description": "RIT의 중심 자산인 MIX기반의 금융공학을 연구하는 학과입니다."
     },
     "aerospaceEngineering": {
       "title": "우주공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "description": "우주로 진출하여 달에서 MIX를 사용하는 방법을 연구하는 학과입니다."
     },
     "computerEngineering": {
       "title": "컴퓨터공학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "description": "MIX의 근간인 블록체인을 연구하고 고장난 컴퓨터를 고쳐주는 학과입니다."
     },
     "chemistry": {
       "title": "화학과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "description": "MIX를 화학적으로 활용한 합성 제품을 연구하는 학과입니다."
     },
     "electricalEngineering": {
       "title": "전자과",
-      "description": "그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까? 그들을 대학에서는 TOMOZ 당신은 어떤 TOMOZ가 됩니까?"
+      "description": "MIX를 전하단위에서 분석하여 MIX의 생산량증대를 연구하는 학과입니다."
     }
   }
 }

@@ -2,58 +2,58 @@
   "en": {
     "title": "Roadmap",
     "step1": {
-      "name": "대학 준공",
-      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+      "name": "Open",
+      "description": "Open webSite for community."
     },
     "step2": {
-      "name": "학생증 발급",
-      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+      "name": "Mint",
+      "description": "4000 of TOMOZ will be minted."
     },
     "step3": {
-      "name": "학사 과정",
-      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+      "name": "Bachelor's",
+      "description": "Bachelor's course will be completed after finishing the quest."
     },
     "step4": {
-      "name": "수료",
-      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+      "name": "Graduated",
+      "description": "The Student Completed Bachelor's course will join the reserch activity as a scientist."
     }
   },
   "jp": {
     "title": "Roadmap",
     "step1": {
-      "name": "대학 준공",
-      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+      "name": "大学の完成",
+      "description": "RITホームページとコミュニティシステムが準備されます。"
     },
     "step2": {
-      "name": "학생증 발급",
-      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+      "name": "学生証の発行",
+      "description": "ミンティングにより4000人のTOMOZがリラ工科大学に入学します。"
     },
     "step3": {
-      "name": "학사 과정",
-      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+      "name": "学士課程",
+      "description": "クエストを通じて学士課程を修了し、学士号を取得します。"
     },
     "step4": {
-      "name": "수료",
-      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+      "name": "卒業",
+      "description": "学士課程を卒業したTOMOZは研究者として本格的な研究活動に参加することができます。"
     }
   },
   "kr": {
     "title": "Roadmap",
     "step1": {
-      "name": "대학 준공",
-      "description": "커뮤니티를 기반으로, RIT 웹이 개설됩니다."
+      "name": "대학완공",
+      "description": "RIT 웹과 커뮤니티 시스템이 준비됩니다."
     },
     "step2": {
-      "name": "학생증 발급",
-      "description": "민팅을 통해 최대 10,000명의 TOMOZ가 리라공과대학에 입학합니다."
+      "name": "학생증발급",
+      "description": "민팅을 통해 최대 4000명의 TOMOZ가 Rira공과대학에 입학합니다."
     },
     "step3": {
-      "name": "학사 과정",
-      "description": "퀘스트를 완수하여 학사 과정을 이수합니다."
+      "name": "학사과정",
+      "description": "퀘스트를 완수하여 학사과정을 졸업합니다."
     },
     "step4": {
       "name": "수료",
-      "description": "학사 과정을 이수한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
+      "description": "학사과정을 졸업한 TOMOZ는 연구자로서 본격적인 연구활동에 참여할 수 있습니다."
     }
   }
 }
