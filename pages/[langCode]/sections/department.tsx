@@ -121,8 +121,13 @@ export default function Department({currentLangCode}: LocalePageProps) {
       </div>
       <div
         css={css`
+          column-gap: 100px;
           display: flex;
           margin-top: 30px;
+          overflow-x: auto;
+          padding-bottom: 10px;
+          scroll-snap-type: x mandatory;
+          width: 100%;
 
           @media (min-width: 1024px) {
             column-gap: 40px;
@@ -130,6 +135,8 @@ export default function Department({currentLangCode}: LocalePageProps) {
             justify-content: center;
             margin-top: 80px;
             max-width: 1200px;
+            overflow-x: visible;
+            padding: 0;
             row-gap: 80px;
           }
 
@@ -140,7 +147,25 @@ export default function Department({currentLangCode}: LocalePageProps) {
             border-radius: 24px;
             display: flex;
             flex-direction: column;
+            min-width: 280px;
+            scroll-snap-align: center;
             width: 280px;
+
+            &:first-of-type {
+              margin-left: calc((100% - 280px) / 2);
+
+              @media (min-width: 1024px) {
+                margin-left: 0;
+              }
+            }
+
+            &:last-of-type {
+              margin-right: calc((100% - 280px) / 2);
+
+              @media (min-width: 1024px) {
+                margin-right: 0;
+              }
+            }
 
             @media (min-width: 1024px) {
               width: 340px;

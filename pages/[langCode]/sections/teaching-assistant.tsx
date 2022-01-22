@@ -36,6 +36,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
             font-size: 24px;
             letter-spacing: -0.75px;
             line-height: 1.25;
+            margin-top: 10px;
             position: absolute;
             text-align: center;
 
@@ -43,6 +44,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
               font-size: 60px;
               letter-spacing: -1.88px;
               line-height: 1.2;
+              margin-top: 20px;
             }
           `}
         >
@@ -62,8 +64,11 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
       </header>
       <div
         css={css`
+          column-gap: 20px;
           display: flex;
           margin-top: 20px;
+          overflow-x: auto;
+          padding: 0 20px;
           position: relative;
           z-index: 1;
 

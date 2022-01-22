@@ -29,6 +29,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
     >
       <div
         css={css`
+          align-items: center;
           background-color: white;
           display: flex;
           height: 100%;
@@ -41,18 +42,20 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
           }
         `}
       >
-        <img
-          src={imagePrefix + '/logo-rit.png'}
-          alt='RIT logo'
-          css={css`
-            object-fit: contain;
-            width: 109px;
+        <a href='#'>
+          <img
+            src={imagePrefix + '/logo-rit.png'}
+            alt='RIT logo'
+            css={css`
+              object-fit: contain;
+              width: 109px;
 
-            @media (min-width: 1024px) {
-              width: 219px;
-            }
-          `}
-        />
+              @media (min-width: 1024px) {
+                width: 219px;
+              }
+            `}
+          />
+        </a>
         <img
           src={imagePrefix + '/icon-menu.png'}
           alt='Menu button'
