@@ -3,20 +3,25 @@ import {balooDa2} from '../../../common/utils/font-loader'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Sitemap() {
+export default function Activity() {
   return (
     <section
+      id='activity'
       css={css`
         background-image: linear-gradient(to right, #b8cbee 2px, transparent 0),
           linear-gradient(to bottom, #b8cbee 2px, transparent 0);
         background-position: 16px -2px;
         background-size: 30px 30px;
+        column-gap: 36px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding: 60px 4px;
+        row-gap: 20px;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1200px) {
           background-size: 40px 40px;
+          column-gap: 32px;
           justify-content: center;
           padding: 126px 32px;
         }
@@ -24,29 +29,23 @@ export default function Sitemap() {
         > div {
           align-items: center;
           display: flex;
-          flex: 50%;
+          flex: 33%;
           flex-direction: column;
 
-          &:nth-of-type(n + 3) {
-            margin-top: 20px;
-
-            @media (min-width: 1024px) {
-              margin-top: 0;
-            }
+          @media (min-width: 1200px) {
+            flex: inherit;
           }
 
-          @media (min-width: 1024px) {
-            flex: inherit;
-
-            &:not(:first-of-type) {
-              margin-left: 32px;
-            }
+          a {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
           }
 
           img {
             width: 120px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               width: 240px;
             }
           }
@@ -55,12 +54,13 @@ export default function Sitemap() {
             color: #000;
             font-family: ${balooDa2}, sans-serif;
             font-size: 20px;
+            font-weight: bold;
             letter-spacing: -0.63px;
             line-height: normal;
             margin-top: 10px;
             text-align: center;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               font-size: 40px;
               letter-spacing: -1.25px;
               margin-top: 20px;
@@ -70,24 +70,13 @@ export default function Sitemap() {
       `}
     >
       <div css={css``}>
-        <a href='#'>
+        <a css={css``} onClick={() => alert('Coming Soon!')}>
           <img
             src={imagePrefix + '/link-home.png'}
-            alt='Go to Home'
+            alt='Go to Mint'
             css={css``}
           />
-        </a>
-        <a
-          href='#'
-          css={css`
-            margin-top: 0;
-
-            @media (min-width: 1024px) {
-              margin-top: 20px;
-            }
-          `}
-        >
-          <span css={css``}>HOME</span>
+          <span css={css``}>MINT</span>
         </a>
       </div>
       <div css={css``}>

@@ -1,6 +1,10 @@
 import {css} from '@emotion/react'
-import {LocalePageProps} from '../../../common/lib/locales'
-import {oneMobilePop, oneMobileRegular} from '../../../common/utils/font-loader'
+import {LangCode, LocalePageProps} from '../../../common/lib/locales'
+import {
+  notoSansJp,
+  oneMobilePop,
+  oneMobileRegular,
+} from '../../../common/utils/font-loader'
 import contents from './introduction.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -20,7 +24,10 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
 
         > p {
           color: #1e1e1e;
-          font-family: ${oneMobileRegular}, sans-serif;
+          font-family: ${currentLangCode === LangCode.Jp
+              ? notoSansJp
+              : oneMobileRegular},
+            sans-serif;
           font-size: 12px;
           font-weight: bold;
           letter-spacing: -0.38px;
@@ -31,13 +38,13 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
           text-align: center;
           width: 420px;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 24px;
             font-stretch: normal;
             letter-spacing: -0.75px;
             line-height: 1.83;
             margin-top: 40px;
-            width: 780px;
+            width: 850px;
           }
         }
       `}
@@ -45,11 +52,11 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
       <div
         css={css`
           margin-top: -40px;
-          max-width: 420px;
+          max-width: 430px;
           position: relative;
           width: 100%;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             margin-top: -80px;
             max-width: 1024px;
             width: 100%;
@@ -69,7 +76,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
           css={css`
             display: none;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               bottom: -93px;
               display: inherit;
               left: -153px;
@@ -84,7 +91,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
           css={css`
             display: none;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               display: inherit;
               position: absolute;
               right: -90px;
@@ -97,21 +104,25 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
       <h2
         css={css`
           color: #1e1e1e;
-          font-family: ${oneMobilePop}, sans-serif;
+          font-family: ${currentLangCode === LangCode.Jp
+              ? notoSansJp
+              : oneMobilePop},
+            sans-serif;
           font-size: 24px;
+          font-weight: ${currentLangCode === LangCode.Jp ? 'bold' : 'normal'};
           letter-spacing: -0.75px;
           line-height: 1.25;
           margin-top: 20px;
           max-width: 100%;
           padding: 0 15px;
           text-align: center;
-          width: 420px;
+          width: 430px;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 48px;
             letter-spacing: -1.5px;
             margin-top: 40px;
-            width: 780px;
+            width: 850px;
           }
         `}
       >
@@ -128,7 +139,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
           width: 658px;
           z-index: -1;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             max-width: 1333px;
             width: calc(100% * 1333 / 1440);
           }
@@ -142,7 +153,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
             height: 25px;
             width: 100%;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               height: 50px;
             }
           }

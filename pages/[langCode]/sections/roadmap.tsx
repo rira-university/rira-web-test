@@ -1,6 +1,10 @@
 import {css} from '@emotion/react'
-import {LocalePageProps} from '../../../common/lib/locales'
-import {oneMobilePop, oneMobileRegular} from '../../../common/utils/font-loader'
+import {LangCode, LocalePageProps} from '../../../common/lib/locales'
+import {
+  notoSansJp,
+  oneMobilePop,
+  oneMobileRegular,
+} from '../../../common/utils/font-loader'
 import contents from './roadmap.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -10,6 +14,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
 
   return (
     <section
+      id='roadmap'
       css={css`
         align-items: center;
         background-color: #e4f1f4;
@@ -22,7 +27,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
         padding: 60px 40px 78px;
         position: relative;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
           background-size: 36px 36px;
           padding: 120px 0 100px;
         }
@@ -39,7 +44,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
           text-align: center;
           z-index: 1;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 60px;
             letter-spacing: -1.88px;
             line-height: 1.2;
@@ -56,7 +61,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
           width: 280px;
           z-index: 1;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             height: 750px;
             margin-top: 38px;
             width: 960px;
@@ -69,7 +74,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
             display: flex;
             flex-direction: column;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               height: 525px;
               justify-content: center;
               margin-left: 25px;
@@ -83,7 +88,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
               display: flex;
               flex-direction: column;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 flex-direction: row;
                 height: 60px;
                 width: 100%;
@@ -95,8 +100,14 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
                 border-radius: 6px;
                 color: #fff;
                 display: flex;
-                font-family: ${oneMobilePop}, sans-serif;
+                font-family: ${currentLangCode === LangCode.Jp
+                    ? notoSansJp
+                    : oneMobilePop},
+                  sans-serif;
                 font-size: 20px;
+                font-weight: ${currentLangCode === LangCode.Jp
+                  ? 'bold'
+                  : 'normal'};
                 height: 36px;
                 justify-content: center;
                 letter-spacing: -0.63px;
@@ -104,7 +115,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
                 text-align: center;
                 width: 135px;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 900px) {
                   border-radius: 12px;
                   font-size: 30px;
                   height: 60px;
@@ -117,7 +128,10 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
 
               > p {
                 color: #000;
-                font-family: ${oneMobileRegular}, sans-serif;
+                font-family: ${currentLangCode === LangCode.Jp
+                    ? notoSansJp
+                    : oneMobileRegular},
+                  sans-serif;
                 font-size: 12px;
                 font-weight: bold;
                 letter-spacing: -0.38px;
@@ -125,7 +139,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
                 margin-top: 10px;
                 text-align: center;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 900px) {
                   font-size: 24px;
                   letter-spacing: -0.75px;
                   margin-left: 20px;
@@ -138,7 +152,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
             > img {
               width: 36px;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 align-self: flex-start;
                 margin-left: 90px;
                 width: 60px;
@@ -175,7 +189,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
             top: 0;
             z-index: -1;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               display: inline;
             }
           `}
@@ -190,7 +204,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
           position: absolute;
           width: 100%;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             height: 150px;
           }
         `}
@@ -205,7 +219,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
           position: absolute;
           width: 320px;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             bottom: 37px;
             width: 1440px;
           }

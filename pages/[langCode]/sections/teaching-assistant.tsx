@@ -1,6 +1,10 @@
 import {css} from '@emotion/react'
-import {LocalePageProps} from '../../../common/lib/locales'
-import {oneMobilePop, oneMobileRegular} from '../../../common/utils/font-loader'
+import {LangCode, LocalePageProps} from '../../../common/lib/locales'
+import {
+  notoSansJp,
+  oneMobilePop,
+  oneMobileRegular,
+} from '../../../common/utils/font-loader'
 import contents from './teaching-assistant.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -10,12 +14,13 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
 
   return (
     <section
+      id='teaching-assistant'
       css={css`
         background-color: #fff0d2;
         padding: 40px 0 80px;
         position: relative;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
           padding: 100px 0 172px;
         }
       `}
@@ -40,7 +45,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
             position: absolute;
             text-align: center;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               font-size: 60px;
               letter-spacing: -1.88px;
               line-height: 1.2;
@@ -56,7 +61,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
           css={css`
             width: 300px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               width: 780px;
             }
           `}
@@ -72,7 +77,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
           position: relative;
           z-index: 1;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             column-gap: 40px;
             flex: 50%;
             flex-wrap: wrap;
@@ -92,7 +97,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
             position: relative;
             width: 220px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               height: 620px;
               padding: 72px 24px 52px;
               width: 348px;
@@ -105,7 +110,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
               height: 172px;
               width: 172px;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 height: 240px;
                 width: 240px;
               }
@@ -120,7 +125,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
               margin-top: 20px;
               text-align: center;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 font-size: 40px;
                 letter-spacing: -1.25px;
                 line-height: 1.5;
@@ -129,7 +134,10 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
 
             > p {
               color: #000;
-              font-family: ${oneMobileRegular}, sans-serif;
+              font-family: ${currentLangCode === LangCode.Jp
+                  ? notoSansJp
+                  : oneMobileRegular},
+                sans-serif;
               font-size: 12px;
               font-weight: bold;
               letter-spacing: -0.38px;
@@ -137,7 +145,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
               margin-top: 10px;
               text-align: center;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 font-size: 24px;
                 letter-spacing: -0.75px;
               }
@@ -149,7 +157,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
               width: 100%;
               z-index: -1;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
               }
             }
           }
@@ -207,7 +215,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
           position: absolute;
           width: 200%;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             width: 100%;
           }
         `}

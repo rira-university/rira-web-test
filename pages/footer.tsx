@@ -6,6 +6,7 @@ const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 export default function Footer() {
   return (
     <footer
+      id='footer'
       css={css`
         align-items: center;
         background-color: #869cdd;
@@ -13,7 +14,7 @@ export default function Footer() {
         flex-direction: column;
         padding: 22px 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
           flex-direction: row-reverse;
           justify-content: space-between;
           padding: 36px calc(100% * 192 / 1440);
@@ -30,7 +31,7 @@ export default function Footer() {
             img {
               width: 24px;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 900px) {
                 width: 48px;
               }
             }
@@ -81,11 +82,12 @@ export default function Footer() {
           color: #000;
           font-family: ${balooDa2}, sans-serif;
           font-size: 12px;
+          font-weight: bold;
           letter-spacing: -0.38px;
           margin-top: 12px;
           text-align: center;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 24px;
             letter-spacing: -0.75px;
             margin-top: 0;

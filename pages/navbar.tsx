@@ -8,6 +8,7 @@ const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export default function Navbar({currentLangCode}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
+  const closeMenu = () => setIsMenuOpened(false)
 
   return (
     <nav
@@ -21,7 +22,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
         top: 0;
         z-index: 2;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1200px) {
           height: 120px;
           padding: 0 calc(100% * 192 / 1440);
         }
@@ -37,7 +38,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
           padding: 0 20px;
           width: 100%;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1200px) {
             padding: 0;
           }
         `}
@@ -47,10 +48,11 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             src={imagePrefix + '/logo-rit.png'}
             alt='RIT logo'
             css={css`
+              display: flex;
               object-fit: contain;
               width: 109px;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 1200px) {
                 width: 219px;
               }
             `}
@@ -65,7 +67,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             object-fit: contain;
             width: 20px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               display: none;
             }
           `}
@@ -84,7 +86,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             width: 100%;
             z-index: -1;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               display: none;
             }
           `}
@@ -98,14 +100,13 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
           display: flex;
           flex-direction: column;
           left: 0;
-          padding-bottom: 12px;
           position: absolute;
           transform: translateY(${isMenuOpened ? '100%' : 0});
           transition: transform 0.3s;
           width: 100%;
           z-index: -1;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1200px) {
             align-items: center;
             flex-direction: row;
             height: 100%;
@@ -123,7 +124,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             display: flex;
             flex-direction: column;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               align-items: center;
               flex-direction: row;
             }
@@ -131,12 +132,13 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             > a {
               font-family: ${baloo2}, sans-serif;
               font-size: 24px;
+              font-weight: bold;
               height: 48px;
               letter-spacing: -0.75px;
               line-height: 1.25;
               padding: 9px 20px;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 1200px) {
                 height: auto;
                 margin-left: 20px;
                 padding: 0;
@@ -144,16 +146,20 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <a
-            onClick={() => alert('Coming Soon')}
-            css={css`
-              cursor: pointer;
-            `}
-          >
-            Mint
+          <a onClick={closeMenu} href='#activity'>
+            Activity
           </a>
-          <a href='https://opensea.io/' target='_blank' rel='noreferrer'>
-            OpenSea
+          <a onClick={closeMenu} href='#department'>
+            Dept
+          </a>
+          <a onClick={closeMenu} href='#teaching-assistant'>
+            Assistant
+          </a>
+          <a onClick={closeMenu} href='#roadmap'>
+            Roadmap
+          </a>
+          <a onClick={closeMenu} href='#footer'>
+            Channel
           </a>
         </div>
         <div
@@ -165,7 +171,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             justify-content: flex-end;
             padding: 0 20px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1200px) {
               margin-left: 40px;
               padding: 0;
             }
@@ -175,19 +181,21 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             <Link key={langCode} href={`/${langCode}`}>
               <a
                 href={`/${langCode}`}
+                onClick={closeMenu}
                 css={css`
                   color: ${langCode === currentLangCode
                     ? '#969696'
                     : '#c8c8c8'};
                   font-family: ${balooDa2}, sans-serif;
                   font-size: 24px;
+                  font-weight: bold;
                   letter-spacing: -0.75px;
 
                   &:not(:first-of-type) {
                     margin-left: 10px;
                   }
 
-                  @media (min-width: 1024px) {
+                  @media (min-width: 1200px) {
                     margin: 0;
                   }
                 `}

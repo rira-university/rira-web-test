@@ -14,7 +14,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
         background-color: #ffd0c5;
         padding: 60px 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
           padding: 80px 0 108px;
         }
       `}
@@ -28,7 +28,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           line-height: 1.25;
           text-align: center;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 60px;
             letter-spacing: -1.88px;
             line-height: 1.2;
@@ -47,7 +47,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           margin-top: 10px;
           text-align: center;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 30px;
             letter-spacing: -0.94px;
             line-height: 1.33;
@@ -63,7 +63,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           justify-content: center;
           margin-top: 20px;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             margin-top: 30px;
           }
         `}
@@ -74,7 +74,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           css={css`
             width: 120px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               width: 300px;
             }
           `}
@@ -86,7 +86,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
             margin-left: 8px;
             width: 24px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               margin-left: 30px;
             }
           `}
@@ -98,7 +98,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
             margin-left: 8px;
             width: 120px;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               margin-left: 30px;
               width: 300px;
             }

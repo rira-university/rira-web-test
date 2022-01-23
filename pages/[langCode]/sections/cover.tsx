@@ -1,6 +1,6 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
-import {balooDa2} from '../../../common/utils/font-loader'
+import {baloo2} from '../../../common/utils/font-loader'
 import contents from './cover.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -18,7 +18,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
         position: relative;
         z-index: 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
           padding-top: 92px;
         }
       `}
@@ -26,13 +26,14 @@ export default function Cover({currentLangCode}: LocalePageProps) {
       <h1
         css={css`
           color: #000;
-          font-family: ${balooDa2}, sans-serif;
+          font-family: ${baloo2}, sans-serif;
           font-size: 20px;
+          font-weight: bold;
           letter-spacing: -0.63px;
           line-height: 1.5;
           text-align: center;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             font-size: 40px;
             letter-spacing: -1.25px;
             line-height: normal;
@@ -49,7 +50,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           object-fit: contain;
           width: 290px;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             margin-top: 20px;
             width: 580px;
           }
@@ -72,7 +73,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           align-items: flex-end;
           display: flex;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 900px) {
             margin-top: -40px;
           }
         `}
@@ -86,7 +87,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             width: 144px;
             z-index: 0;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               margin-right: -230px;
               width: 360px;
             }
@@ -100,7 +101,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             width: 180px;
             z-index: 1;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               width: 460px;
             }
           `}
@@ -115,7 +116,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             width: 260px;
             z-index: 2;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               margin-left: -250px;
               margin-right: -250px;
               width: 640px;
@@ -130,7 +131,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             width: 180px;
             z-index: 1;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               width: 460px;
             }
           `}
@@ -144,7 +145,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             width: 144px;
             z-index: 0;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 900px) {
               margin-left: -230px;
               width: 360px;
             }

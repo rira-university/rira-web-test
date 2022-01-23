@@ -2,15 +2,32 @@ import Head from 'next/head'
 import {css} from '@emotion/react'
 import Cover from './sections/cover'
 import Introduction from './sections/introduction'
-import Sitemap from './sections/sitemap'
+import Activity from './sections/activity'
 import Department from './sections/department'
 import TeachingAssistant from './sections/teaching-assistant'
 import Roadmap from './sections/roadmap'
 import {LangCode, LocalePageProps} from '../../common/lib/locales'
 import Partners from '@/pages/[langCode]/sections/partners'
+import {useEffect} from 'react'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
   const {currentLangCode} = localePageProps
+
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault()
+        const target = e.currentTarget as HTMLAnchorElement
+        const targetSelector = target.getAttribute('href') || '#'
+        // @ts-ignore
+        document
+          .querySelector(targetSelector === '#' ? 'body' : targetSelector)
+          .scrollIntoView({
+            behavior: 'smooth',
+          })
+      })
+    })
+  }, [])
 
   return (
     <>
@@ -30,11 +47,12 @@ export default function IndexPage(localePageProps: LocalePageProps) {
       <main
         css={css`
           overflow: hidden;
+          ${currentLangCode === LangCode.Kr && 'word-break: keep-all'}
         `}
       >
         <Cover {...localePageProps} />
         <Introduction {...localePageProps} />
-        <Sitemap />
+        <Activity />
         <Department {...localePageProps} />
         <TeachingAssistant {...localePageProps} />
         <Roadmap {...localePageProps} />
