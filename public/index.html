@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Rira Institute of Technology</title>
+  <script>
+    const supportedLanguages = ['en', 'jp', 'kr']
+    navigator.languages.forEach((langCode) => {
+      if (supportedLanguages.some(langCode.startsWith.bind(langCode))) {
+        window.location = langCode
+      }
+    })
+
+    window.location = 'en'
+  </script>
+</head>
+<body>
+
+</body>
+</html>
