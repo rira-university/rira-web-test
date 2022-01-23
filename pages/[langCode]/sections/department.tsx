@@ -139,7 +139,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
       </div>
       <div
         css={css`
-          column-gap: 100px;
+          column-gap: 16px;
           display: flex;
           margin-top: 30px;
           overflow-x: auto;
