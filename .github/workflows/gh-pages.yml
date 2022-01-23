@@ -30,6 +30,7 @@ jobs:
       run: npm ci
     - name: Build and export app
       run: npm run build
+      if: github.repository != 'rira-university/rira-web'
       env:
         NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
     - name: Setup for staging environment
