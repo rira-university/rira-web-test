@@ -72,7 +72,7 @@ export default function Activity() {
       <div css={css``}>
         <a css={css``} onClick={() => alert('Coming Soon!')}>
           <img
-            src={imagePrefix + '/link-home.png'}
+            src={imagePrefix + '/imgs/link-home.png'}
             alt='Go to Mint'
             css={css``}
           />
@@ -81,19 +81,23 @@ export default function Activity() {
       </div>
       <div css={css``}>
         <img
-          src={imagePrefix + '/link-tomoz.png'}
+          src={imagePrefix + '/imgs/link-tomoz.png'}
           alt='Go to Tomoz'
           css={css``}
         />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
-        <img src={imagePrefix + '/link-lab.png'} alt='Go to Lab' css={css``} />
+        <img
+          src={imagePrefix + '/imgs/link-lab.png'}
+          alt='Go to Lab'
+          css={css``}
+        />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
         <img
-          src={imagePrefix + '/link-comingsoon.png'}
+          src={imagePrefix + '/imgs/link-comingsoon.png'}
           alt='Coming Soon'
           css={css``}
         />

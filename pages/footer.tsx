@@ -39,42 +39,45 @@ export default function Footer() {
         `}
       >
         <a
-          href='https://twitter.com/KawaiiGirlNFT'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={imagePrefix + '/icon-twitterjp.png'}
-            alt='Twitter JP logo'
-          />
-        </a>
-        <a
           href='https://twitter.com/RiraUniversity'
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/icon-twitter.png'} alt='Twitter logo' />
+          <img
+            src={imagePrefix + '/imgs/icon-twitter.png'}
+            alt='Twitter logo'
+          />
+        </a>
+        <a
+          href='https://open.kakao.com/o/gCz5GkUd'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={imagePrefix + '/imgs/icon-kakao.png'} alt='Kakao logo' />
         </a>
         <a
           href='https://github.com/rira-university/'
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/icon-github.png'} alt='GitHub logo' />
+          <img src={imagePrefix + '/imgs/icon-github.png'} alt='GitHub logo' />
         </a>
         <a
           href='https://discord.com/invite/4mX3gBRDWt'
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/icon-discord.png'} alt='Discord logo' />
+          <img
+            src={imagePrefix + '/imgs/icon-discord.png'}
+            alt='Discord logo'
+          />
         </a>
         <a
           href='https://medium.com/rira-institute-of-technology'
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/icon-medium.png'} alt='Medium logo' />
+          <img src={imagePrefix + '/imgs/icon-medium.png'} alt='Medium logo' />
         </a>
       </div>
       <span

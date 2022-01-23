@@ -43,7 +43,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
         {content.title}
       </h1>
       <img
-        src={imagePrefix + `/title-${currentLangCode}.png`}
+        src={imagePrefix + `/imgs/title-${currentLangCode}.png`}
         alt={content.welcomeImageAlt}
         css={css`
           margin-top: 10px;
@@ -57,7 +57,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
         `}
       />
       <img
-        src={imagePrefix + '/bg-section-01.png'}
+        src={imagePrefix + '/imgs/bg-section-01.png'}
         alt=''
         css={css`
           height: 100%;
@@ -79,7 +79,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/character-sub-04.png'}
+          src={imagePrefix + '/imgs/character-sub-04.png'}
           alt=''
           css={css`
             margin-right: -90px;
@@ -94,7 +94,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/character-sub-02.png'}
+          src={imagePrefix + '/imgs/character-sub-02.png'}
           alt=''
           css={css`
             position: relative;
@@ -107,7 +107,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/character-main.png'}
+          src={imagePrefix + '/imgs/character-main.png'}
           alt=''
           css={css`
             margin-left: -100px;
@@ -124,7 +124,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/character-sub-01.png'}
+          src={imagePrefix + '/imgs/character-sub-01.png'}
           alt=''
           css={css`
             position: relative;
@@ -137,7 +137,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/character-sub-03.png'}
+          src={imagePrefix + '/imgs/character-sub-03.png'}
           alt=''
           css={css`
             margin-left: -90px;

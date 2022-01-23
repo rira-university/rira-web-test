@@ -56,7 +56,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
           Teaching Assistant
         </h2>
         <img
-          src={imagePrefix + '/img-header.png'}
+          src={imagePrefix + '/imgs/img-header.png'}
           alt=''
           css={css`
             width: 300px;
@@ -164,50 +164,78 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
         `}
       >
         <div css={css``}>
-          <img src={imagePrefix + '/img-team1.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team1.png'} alt='' />
           <h3>{content.ta1.name}</h3>
           <p>{content.ta1.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team2.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team2.png'} alt='' />
           <h3>{content.ta2.name}</h3>
           <p>{content.ta2.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team3.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team3.png'} alt='' />
           <h3>{content.ta3.name}</h3>
           <p>{content.ta3.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team4.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team4.png'} alt='' />
           <h3>{content.ta4.name}</h3>
           <p>{content.ta4.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team5.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team5.png'} alt='' />
           <h3>{content.ta5.name}</h3>
           <p>{content.ta5.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team6.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team6.png'} alt='' />
           <h3>{content.ta6.name}</h3>
           <p>{content.ta6.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
         <div css={css``}>
-          <img src={imagePrefix + '/img-team7.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-team7.png'} alt='' />
           <h3>{content.ta7.name}</h3>
           <p>{content.ta7.description}</p>
-          <img src={imagePrefix + '/img-clipboard.png'} alt='' css={css``} />
+          <img
+            src={imagePrefix + '/imgs/img-clipboard.png'}
+            alt=''
+            css={css``}
+          />
         </div>
       </div>
       <img
-        src={imagePrefix + '/bg-section-05.png'}
+        src={imagePrefix + '/imgs/bg-section-05.png'}
         alt=''
         css={css`
           bottom: 0;

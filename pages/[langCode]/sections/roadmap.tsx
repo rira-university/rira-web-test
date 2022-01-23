@@ -164,24 +164,24 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
             <h3>{content.step1.name}</h3>
             <p>{content.step1.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
+          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
           <div>
             <h3>{content.step2.name}</h3>
             <p>{content.step2.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
+          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
           <div>
             <h3>{content.step3.name}</h3>
             <p>{content.step3.description}</p>
           </div>
-          <img src={imagePrefix + '/img-arrow.png'} alt='Next' />
+          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
           <div>
             <h3>{content.step4.name}</h3>
             <p>{content.step4.description}</p>
           </div>
         </div>
         <img
-          src={imagePrefix + '/img-computer.png'}
+          src={imagePrefix + '/imgs/img-computer.png'}
           alt=''
           css={css`
             display: none;
@@ -211,7 +211,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
       />
 
       <img
-        src={imagePrefix + '/img-desk.png'}
+        src={imagePrefix + '/imgs/img-desk.png'}
         alt=''
         css={css`
           bottom: 8px;

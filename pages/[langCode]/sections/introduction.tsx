@@ -64,14 +64,14 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/img-school.png'}
+          src={imagePrefix + '/imgs/img-school.png'}
           alt=''
           css={css`
             width: 100%;
           `}
         />
         <img
-          src={imagePrefix + '/img-graduation.png'}
+          src={imagePrefix + '/imgs/img-graduation.png'}
           alt=''
           css={css`
             display: none;
@@ -86,7 +86,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/img-lightbulb.png'}
+          src={imagePrefix + '/imgs/img-lightbulb.png'}
           alt=''
           css={css`
             display: none;
@@ -131,7 +131,7 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
       <p css={css``}>{content.paragraph1}</p>
       <p css={css``}>{content.paragraph2}</p>
       <img
-        src={imagePrefix + '/img-lab.png'}
+        src={imagePrefix + '/imgs/img-lab.png'}
         alt=''
         css={css`
           margin-top: -70px;

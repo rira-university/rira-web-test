@@ -45,7 +45,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
       >
         <a href='#'>
           <img
-            src={imagePrefix + '/logo-rit.png'}
+            src={imagePrefix + '/imgs/logo-rit.png'}
             alt='RIT logo'
             css={css`
               display: flex;
@@ -59,7 +59,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
           />
         </a>
         <img
-          src={imagePrefix + '/icon-menu.png'}
+          src={imagePrefix + '/imgs/icon-menu.png'}
           alt='Menu button'
           onClick={() => setIsMenuOpened(!isMenuOpened)}
           css={css`

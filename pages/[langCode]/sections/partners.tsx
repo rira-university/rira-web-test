@@ -69,7 +69,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/logo-girl.png'}
+          src={imagePrefix + '/imgs/logo-girl.png'}
           alt='Rira logo'
           css={css`
             width: 120px;
@@ -80,7 +80,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/img-partnersx.png'}
+          src={imagePrefix + '/imgs/img-partnersx.png'}
           alt='Cross symbol'
           css={css`
             margin-left: 8px;
@@ -92,7 +92,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           `}
         />
         <img
-          src={imagePrefix + '/logo-dogesound.png'}
+          src={imagePrefix + '/imgs/logo-dogesound.png'}
           alt='Doge Sound Club logo'
           css={css`
             margin-left: 8px;

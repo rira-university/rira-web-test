@@ -47,7 +47,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/img-rira-postit.png'}
+          src={imagePrefix + '/imgs/img-rira-postit.png'}
           alt=''
           css={css`
             width: 100%;
@@ -253,7 +253,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/img-class-finance.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-class-finance.png'} alt='' />
           <h3>{content.financialEngineering.title}</h3>
           <p>{content.financialEngineering.description}</p>
         </div>
@@ -266,7 +266,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/img-class-space.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-class-space.png'} alt='' />
           <h3>{content.aerospaceEngineering.title}</h3>
           <p>{content.aerospaceEngineering.description}</p>
         </div>
@@ -279,7 +279,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/img-class-computer.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-class-computer.png'} alt='' />
           <h3>{content.computerEngineering.title}</h3>
           <p>{content.computerEngineering.description}</p>
         </div>
@@ -292,7 +292,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/img-class-chemistry.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-class-chemistry.png'} alt='' />
           <h3>{content.chemistry.title}</h3>
           <p>{content.chemistry.description}</p>
         </div>
@@ -305,13 +305,13 @@ export default function Department({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/img-class-electric.png'} alt='' />
+          <img src={imagePrefix + '/imgs/img-class-electric.png'} alt='' />
           <h3>{content.electricalEngineering.title}</h3>
           <p>{content.electricalEngineering.description}</p>
         </div>
       </div>
       <img
-        src={imagePrefix + '/bg-section-04.png'}
+        src={imagePrefix + '/imgs/bg-section-04.png'}
         alt=''
         css={css`
           height: 100%;
