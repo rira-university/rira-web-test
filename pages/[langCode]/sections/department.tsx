@@ -47,7 +47,7 @@ export default function Department({currentLangCode}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/imgs/img-rira-postit.png'}
+          src={imagePrefix + '/imgs/img-rira-postit.gif'}
           alt=''
           css={css`
             width: 100%;

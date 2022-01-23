@@ -3,7 +3,7 @@
     "title": "Roadmap",
     "step1": {
       "name": "Open",
-      "description": "Open webSite for community."
+      "description": "Open WebSite for Community."
     },
     "step2": {
       "name": "Mint",
@@ -11,11 +11,11 @@
     },
     "step3": {
       "name": "Bachelor's",
-      "description": "Bachelor's course will be completed after finishing the quest."
+      "description": "Bachelor's course will be completed after by getting academic credits."
     },
     "step4": {
       "name": "Graduated",
-      "description": "The Student Completed Bachelor's course will join the reserch activity as a scientist."
+      "description": "The Student Completed Bachelor's course will join the research activity as a scientist."
     }
   },
   "jp": {
@@ -30,7 +30,7 @@
     },
     "step3": {
       "name": "学士課程",
-      "description": "クエストを通じて学士課程を修了し、学士号を取得します。"
+      "description": "単位を取って学士課程を修了し、学士号を取得します。"
     },
     "step4": {
       "name": "卒業",
@@ -49,7 +49,7 @@
     },
     "step3": {
       "name": "학사과정",
-      "description": "퀘스트를 완수하여 학사과정을 졸업합니다."
+      "description": "학점을 취득하여 학사 과정을 졸업합니다."
     },
     "step4": {
       "name": "수료",
