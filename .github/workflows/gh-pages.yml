@@ -33,11 +33,11 @@ jobs:
     - name: Build and export app
       run: npm run build
       env:
-        NEXT_PUBLIC_BASE_PATH: ${{ env.IS_STAGING == false && format('/{0}', github.event.repository.name) || '' }}
+        NEXT_PUBLIC_BASE_PATH: ${{ env.IS_STAGING == 'true' && format('/{0}', github.event.repository.name) || '' }}
     - name: After build
       run: touch ./out/.nojekyll
     - name: Setup for staging environment
-      if: ${{ env.IS_STAGING == true }}
+      if: env.IS_STAGING == 'true'
       run: |
         echo -e "User-agent: *\nDisallow: /" > out/robots.txt
     - name: Deploy 🚀
