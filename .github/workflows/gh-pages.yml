@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      IS_STAGING: github.repository != 'rira-university/rira-web-test'
+      IS_STAGING: ${{ github.repository != 'rira-university/rira-web-test' }}
 
     strategy:
       matrix:
