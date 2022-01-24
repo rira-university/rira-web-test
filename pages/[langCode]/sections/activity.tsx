@@ -70,13 +70,37 @@ export default function Activity() {
       `}
     >
       <div css={css``}>
-        <a css={css``} onClick={() => alert('Coming Soon!')}>
+        <a
+          css={css`
+            position: relative;
+          `}
+          onClick={() => alert('Coming Soon!')}
+        >
           <img
             src={imagePrefix + '/imgs/link-home.png'}
             alt='Go to Mint'
             css={css``}
           />
           <span css={css``}>MINT</span>
+          <span
+            className='d-day'
+            css={css`
+              &.d-day {
+                color: white;
+                left: calc(50% - 2px);
+                position: absolute;
+                top: 40px;
+                transform: translateX(-50%);
+
+                @media (min-width: 1200px) {
+                  left: calc(50% - 5px);
+                  top: 80px;
+                }
+              }
+            `}
+          >
+            D-5
+          </span>
         </a>
       </div>
       <div css={css``}>
