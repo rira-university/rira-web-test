@@ -34,7 +34,10 @@ export default function MyHead({currentLangCode}: LocalePageProps) {
       />
 
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://rira.university/' />
+      <meta
+        property='og:url'
+        content={`https://rira.university/${currentLangCode}`}
+      />
       <meta property='og:title' content={content.title} />
       <meta property='og:description' content={content.description} />
       <meta
@@ -43,7 +46,10 @@ export default function MyHead({currentLangCode}: LocalePageProps) {
       />
 
       <meta property='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content='https://rira.university/' />
+      <meta
+        property='twitter:url'
+        content={`https://rira.university/${currentLangCode}`}
+      />
       <meta property='twitter:title' content={content.title} />
       <meta property='twitter:description' content={content.description} />
       <meta
@@ -54,7 +60,7 @@ export default function MyHead({currentLangCode}: LocalePageProps) {
       <link
         rel='alternate'
         hrefLang='x-default'
-        href='https://rira.university/en'
+        href={`https://rira.university/${LangCode.En}`}
       />
     </Head>
   )
