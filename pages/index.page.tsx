@@ -7,7 +7,7 @@ export default function IndexPage() {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-            const supportedLanguages = {en: '${LangCode.En}', jp: '${LangCode.Jp}', ko: '${LangCode.Kr}'}
+            const supportedLanguages = {en: '${LangCode.En}', ja: '${LangCode.Jp}', ko: '${LangCode.Kr}'}
             let matched = false // window.location has some delay, so it may cause wrong result.
         
             navigator.languages.forEach((tags) => {
