@@ -13,6 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      IS_STAGING: github.repository != 'rira-university/rira-web-test'
 
     strategy:
       matrix:
@@ -30,10 +32,12 @@ jobs:
       run: npm ci
     - name: Build and export app
       run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: ${{ env.IS_STAGING && format('/{0}', github.event.repository.name) || '' }}
     - name: After build
       run: touch ./out/.nojekyll
     - name: Setup for staging environment
-      if: github.repository != 'rira-university/rira-web'
+      if: ${{ env.IS_STAGING }}
       run: |
         echo -e "User-agent: *\nDisallow: /" > out/robots.txt
     - name: Deploy 🚀
