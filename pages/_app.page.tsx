@@ -4,6 +4,7 @@ import type {AppProps} from 'next/app'
 import Head from '@/pages/head'
 import Navbar from '@/pages/navbar'
 import Footer from '@/pages/footer'
+import {useRouter} from 'next/router'
 import '@/styles/global.css'
 
 type NextPageWithLayout = NextPage & {
@@ -15,14 +16,26 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
+  const router = useRouter()
+  const {pathname} = router // pick the one that you need
+
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  return getLayout(
-    <>
-      <Head {...pageProps} />
-      <Navbar {...pageProps} />
-      <Component {...pageProps} />
-      <Footer />
-    </>,
-  )
+  if (pathname === '/') {
+    return getLayout(
+      <>
+        <Head {...pageProps} />
+        <Component {...pageProps} />
+      </>,
+    )
+  } else {
+    return getLayout(
+      <>
+        <Head {...pageProps} />
+        <Navbar {...pageProps} />
+        <Component {...pageProps} />
+        <Footer />
+      </>,
+    )
+  }
 }
