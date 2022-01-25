@@ -108,7 +108,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
               margin-right: -90px;
               position: relative;
               transform: translateY(100%);
-              transition: transform 0.5s 0.5s;
+              transition: transform 0.8s 0.6s;
               width: 144px;
               z-index: 0;
 
@@ -128,7 +128,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             css={css`
               position: relative;
               transform: translateY(100%);
-              transition: transform 0.5s 0.2s;
+              transition: transform 0.8s 0.3s;
               width: 180px;
               z-index: 1;
 
@@ -149,7 +149,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
               margin-right: -100px;
               position: relative;
               transform: translateY(100%);
-              transition: transform 0.5s;
+              transition: transform 0.8s;
               width: 260px;
               z-index: 2;
 
@@ -170,7 +170,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
             css={css`
               position: relative;
               transform: translateY(100%);
-              transition: transform 0.5s 0.2s;
+              transition: transform 0.8s 0.3s;
               width: 180px;
               z-index: 1;
 
@@ -190,7 +190,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
               margin-left: -90px;
               position: relative;
               transform: translateY(100%);
-              transition: transform 0.5s 0.5s;
+              transition: transform 0.8s 0.6s;
               width: 144px;
               z-index: 0;
 
