@@ -2,6 +2,7 @@ import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
 import {baloo2} from '../../../common/utils/font-loader'
 import contents from './cover.json'
+import Animator from '../../../common/utils/Animator'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -23,39 +24,60 @@ export default function Cover({currentLangCode}: LocalePageProps) {
         }
       `}
     >
-      <h1
-        css={css`
-          color: #000;
-          font-family: ${baloo2}, sans-serif;
-          font-size: 20px;
-          font-weight: bold;
-          letter-spacing: -0.63px;
-          line-height: 1.5;
-          text-align: center;
+      <Animator threshold={0}>
+        <h1
+          css={css`
+            color: #000;
+            font-family: ${baloo2}, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -0.63px;
+            line-height: 1.5;
+            opacity: 0;
+            text-align: center;
+            transform: translateY(-80px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
 
-          @media (min-width: 900px) {
-            font-size: 40px;
-            letter-spacing: -1.25px;
-            line-height: normal;
-          }
-        `}
-      >
-        {content.title}
-      </h1>
-      <img
-        src={imagePrefix + `/imgs/title-${currentLangCode}.png`}
-        alt={content.welcomeImageAlt}
-        css={css`
-          margin-top: 10px;
-          object-fit: contain;
-          width: 290px;
+            @media (min-width: 900px) {
+              font-size: 40px;
+              letter-spacing: -1.25px;
+              line-height: normal;
+            }
 
-          @media (min-width: 900px) {
-            margin-top: 20px;
-            width: 580px;
-          }
-        `}
-      />
+            &.animate {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          `}
+        >
+          {content.title}
+        </h1>
+      </Animator>
+      <Animator>
+        <img
+          src={imagePrefix + `/imgs/title-${currentLangCode}.png`}
+          alt={content.welcomeImageAlt}
+          css={css`
+            margin-top: 10px;
+            object-fit: contain;
+            opacity: 0;
+            transform: translateY(-100px);
+            transition: opacity 0.4s 0.2s,
+              transform 0.4s cubic-bezier(0.32, 0.29, 0.03, 2.22) 0.2s;
+            width: 290px;
+
+            @media (min-width: 900px) {
+              margin-top: 20px;
+              width: 580px;
+            }
+
+            &.animate {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          `}
+        />
+      </Animator>
       <img
         src={imagePrefix + '/imgs/bg-section-01.png'}
         alt=''
@@ -68,90 +90,122 @@ export default function Cover({currentLangCode}: LocalePageProps) {
           z-index: -1;
         `}
       />
-      <div
-        css={css`
-          align-items: flex-end;
-          display: flex;
-
-          @media (min-width: 900px) {
-            margin-top: -40px;
-          }
-        `}
-      >
-        <img
-          src={imagePrefix + '/imgs/character-sub-04.png'}
-          alt=''
+      <Animator>
+        <div
           css={css`
-            margin-right: -90px;
-            position: relative;
-            width: 144px;
-            z-index: 0;
+            align-items: flex-end;
+            display: flex;
 
             @media (min-width: 900px) {
-              margin-right: -230px;
-              width: 360px;
+              margin-top: -40px;
             }
           `}
-        />
-        <img
-          src={imagePrefix + '/imgs/character-sub-02.png'}
-          alt=''
-          css={css`
-            position: relative;
-            width: 180px;
-            z-index: 1;
+        >
+          <img
+            src={imagePrefix + '/imgs/character-sub-04.png'}
+            alt=''
+            css={css`
+              margin-right: -90px;
+              position: relative;
+              transform: translateY(100%);
+              transition: transform 0.5s 0.5s;
+              width: 144px;
+              z-index: 0;
 
-            @media (min-width: 900px) {
-              width: 460px;
-            }
-          `}
-        />
-        <img
-          src={imagePrefix + '/imgs/character-main.png'}
-          alt=''
-          css={css`
-            margin-left: -100px;
-            margin-right: -100px;
-            position: relative;
-            width: 260px;
-            z-index: 2;
+              @media (min-width: 900px) {
+                margin-right: -230px;
+                width: 360px;
+              }
 
-            @media (min-width: 900px) {
-              margin-left: -250px;
-              margin-right: -250px;
-              width: 640px;
-            }
-          `}
-        />
-        <img
-          src={imagePrefix + '/imgs/character-sub-01.png'}
-          alt=''
-          css={css`
-            position: relative;
-            width: 180px;
-            z-index: 1;
+              .animate & {
+                transform: translateY(0);
+              }
+            `}
+          />
+          <img
+            src={imagePrefix + '/imgs/character-sub-02.png'}
+            alt=''
+            css={css`
+              position: relative;
+              transform: translateY(100%);
+              transition: transform 0.5s 0.2s;
+              width: 180px;
+              z-index: 1;
 
-            @media (min-width: 900px) {
-              width: 460px;
-            }
-          `}
-        />
-        <img
-          src={imagePrefix + '/imgs/character-sub-03.png'}
-          alt=''
-          css={css`
-            margin-left: -90px;
-            position: relative;
-            width: 144px;
-            z-index: 0;
+              @media (min-width: 900px) {
+                width: 460px;
+              }
 
-            @media (min-width: 900px) {
-              margin-left: -230px;
-              width: 360px;
-            }
-          `}
-        />
-      </div>
+              .animate & {
+                transform: translateY(0);
+              }
+            `}
+          />
+          <img
+            src={imagePrefix + '/imgs/character-main.png'}
+            alt=''
+            css={css`
+              margin-left: -100px;
+              margin-right: -100px;
+              position: relative;
+              transform: translateY(100%);
+              transition: transform 0.5s;
+              width: 260px;
+              z-index: 2;
+
+              @media (min-width: 900px) {
+                margin-left: -250px;
+                margin-right: -250px;
+                width: 640px;
+              }
+
+              .animate & {
+                transform: translateY(0);
+              }
+            `}
+          />
+          <img
+            src={imagePrefix + '/imgs/character-sub-01.png'}
+            alt=''
+            css={css`
+              position: relative;
+              transform: translateY(100%);
+              transition: transform 0.5s 0.2s;
+              width: 180px;
+              z-index: 1;
+
+              @media (min-width: 900px) {
+                width: 460px;
+              }
+
+              .animate & {
+                transform: translateY(0);
+              }
+            `}
+          />
+          <img
+            src={imagePrefix + '/imgs/character-sub-03.png'}
+            alt=''
+            css={css`
+              margin-left: -90px;
+              position: relative;
+              transform: translateY(100%);
+              transition: transform 0.5s 0.5s;
+              width: 144px;
+              z-index: 0;
+
+              @media (min-width: 900px) {
+                margin-left: -230px;
+                width: 360px;
+              }
+
+              .animate & {
+                transform: translateY(0);
+              }
+            `}
+          />
+        </div>
+      </Animator>
     </section>
   )
 }

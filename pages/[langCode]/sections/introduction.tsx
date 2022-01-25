@@ -6,6 +6,7 @@ import {
   oneMobileRegular,
 } from '../../../common/utils/font-loader'
 import contents from './introduction.json'
+import Animator from '../../../common/utils/Animator'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -70,36 +71,52 @@ export default function Introduction({currentLangCode}: LocalePageProps) {
             width: 100%;
           `}
         />
-        <img
-          src={imagePrefix + '/imgs/img-graduation.png'}
-          alt=''
-          css={css`
-            display: none;
+        <Animator>
+          <img
+            src={imagePrefix + '/imgs/img-graduation.png'}
+            alt=''
+            css={css`
+              display: none;
+              transform: translateX(-50px);
+              transition: transform 0.5s ease-out;
 
-            @media (min-width: 900px) {
-              bottom: -93px;
-              display: inherit;
-              left: -153px;
-              position: absolute;
-              width: 307px;
-            }
-          `}
-        />
-        <img
-          src={imagePrefix + '/imgs/img-lightbulb.png'}
-          alt=''
-          css={css`
-            display: none;
+              @media (min-width: 900px) {
+                bottom: -93px;
+                display: inherit;
+                left: -153px;
+                position: absolute;
+                width: 307px;
+              }
 
-            @media (min-width: 900px) {
-              display: inherit;
-              position: absolute;
-              right: -90px;
-              top: 213px;
-              width: 192px;
-            }
-          `}
-        />
+              &.animate {
+                transform: translateX(0);
+              }
+            `}
+          />
+        </Animator>
+        <Animator>
+          <img
+            src={imagePrefix + '/imgs/img-lightbulb.png'}
+            alt=''
+            css={css`
+              display: none;
+              transform: translateX(50px);
+              transition: transform 0.5s ease-out;
+
+              @media (min-width: 900px) {
+                display: inherit;
+                position: absolute;
+                right: -90px;
+                top: 213px;
+                width: 192px;
+              }
+
+              &.animate {
+                transform: translateX(0);
+              }
+            `}
+          />
+        </Animator>
       </div>
       <h2
         css={css`

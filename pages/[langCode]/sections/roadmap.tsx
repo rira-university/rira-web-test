@@ -6,6 +6,7 @@ import {
   oneMobileRegular,
 } from '../../../common/utils/font-loader'
 import contents from './roadmap.json'
+import Animator from '../../../common/utils/Animator'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -68,132 +69,150 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
           }
         `}
       >
-        <div
-          css={css`
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-
-            @media (min-width: 900px) {
-              height: 525px;
-              justify-content: center;
-              margin-left: 25px;
-              margin-right: 62px;
-              margin-top: 24px;
-              padding: 0 95px;
-            }
-
-            > div {
+        <Animator>
+          <div
+            css={css`
               align-items: center;
               display: flex;
               flex-direction: column;
+              opacity: 0;
+              transition: opacity 0.5s 0.2s;
 
               @media (min-width: 900px) {
-                flex-direction: row;
-                height: 60px;
-                width: 100%;
-              }
-
-              > h3 {
-                align-items: center;
-                background-color: #f3bc61;
-                border-radius: 6px;
-                color: #fff;
-                display: flex;
-                font-family: ${currentLangCode === LangCode.Jp
-                    ? notoSansJp
-                    : oneMobilePop},
-                  sans-serif;
-                font-size: 20px;
-                font-weight: ${currentLangCode === LangCode.Jp
-                  ? 'bold'
-                  : 'normal'};
-                height: 36px;
+                height: 525px;
                 justify-content: center;
-                letter-spacing: -0.63px;
-                line-height: 2;
-                text-align: center;
-                width: 135px;
+                margin-left: 25px;
+                margin-right: 62px;
+                margin-top: 24px;
+                padding: 0 95px;
+              }
+
+              &.animate {
+                opacity: 1;
+              }
+
+              > div {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
 
                 @media (min-width: 900px) {
-                  border-radius: 12px;
-                  font-size: 30px;
+                  flex-direction: row;
                   height: 60px;
-                  letter-spacing: -0.94px;
-                  line-height: 1.33;
-                  min-width: 240px;
-                  width: 240px;
+                  width: 100%;
+                }
+
+                > h3 {
+                  align-items: center;
+                  background-color: #f3bc61;
+                  border-radius: 6px;
+                  color: #fff;
+                  display: flex;
+                  font-family: ${currentLangCode === LangCode.Jp
+                      ? notoSansJp
+                      : oneMobilePop},
+                    sans-serif;
+                  font-size: 20px;
+                  font-weight: ${currentLangCode === LangCode.Jp
+                    ? 'bold'
+                    : 'normal'};
+                  height: 36px;
+                  justify-content: center;
+                  letter-spacing: -0.63px;
+                  line-height: 2;
+                  text-align: center;
+                  width: 135px;
+
+                  @media (min-width: 900px) {
+                    border-radius: 12px;
+                    font-size: 30px;
+                    height: 60px;
+                    letter-spacing: -0.94px;
+                    line-height: 1.33;
+                    min-width: 240px;
+                    width: 240px;
+                  }
+                }
+
+                > p {
+                  color: #000;
+                  font-family: ${currentLangCode === LangCode.Jp
+                      ? notoSansJp
+                      : oneMobileRegular},
+                    sans-serif;
+                  font-size: 12px;
+                  font-weight: bold;
+                  letter-spacing: -0.38px;
+                  line-height: 1.67;
+                  margin-top: 10px;
+                  text-align: center;
+
+                  @media (min-width: 900px) {
+                    font-size: 24px;
+                    letter-spacing: -0.75px;
+                    margin-left: 20px;
+                    margin-top: 0;
+                    text-align: left;
+                  }
                 }
               }
 
-              > p {
-                color: #000;
-                font-family: ${currentLangCode === LangCode.Jp
-                    ? notoSansJp
-                    : oneMobileRegular},
-                  sans-serif;
-                font-size: 12px;
-                font-weight: bold;
-                letter-spacing: -0.38px;
-                line-height: 1.67;
-                margin-top: 10px;
-                text-align: center;
+              > img {
+                width: 36px;
 
                 @media (min-width: 900px) {
-                  font-size: 24px;
-                  letter-spacing: -0.75px;
-                  margin-left: 20px;
-                  margin-top: 0;
-                  text-align: left;
+                  align-self: flex-start;
+                  margin-left: 90px;
+                  width: 60px;
                 }
               }
-            }
-
-            > img {
-              width: 36px;
+            `}
+          >
+            <div>
+              <h3>{content.step1.name}</h3>
+              <p>{content.step1.description}</p>
+            </div>
+            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <div>
+              <h3>{content.step2.name}</h3>
+              <p>{content.step2.description}</p>
+            </div>
+            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <div>
+              <h3>{content.step3.name}</h3>
+              <p>{content.step3.description}</p>
+            </div>
+            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <div>
+              <h3>{content.step4.name}</h3>
+              <p>{content.step4.description}</p>
+            </div>
+          </div>
+        </Animator>
+        <Animator>
+          <img
+            src={imagePrefix + '/imgs/img-computer.png'}
+            alt=''
+            css={css`
+              display: none;
+              position: absolute;
+              top: 0;
+              z-index: -1;
 
               @media (min-width: 900px) {
-                align-self: flex-start;
-                margin-left: 90px;
-                width: 60px;
-              }
-            }
-          `}
-        >
-          <div>
-            <h3>{content.step1.name}</h3>
-            <p>{content.step1.description}</p>
-          </div>
-          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
-          <div>
-            <h3>{content.step2.name}</h3>
-            <p>{content.step2.description}</p>
-          </div>
-          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
-          <div>
-            <h3>{content.step3.name}</h3>
-            <p>{content.step3.description}</p>
-          </div>
-          <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
-          <div>
-            <h3>{content.step4.name}</h3>
-            <p>{content.step4.description}</p>
-          </div>
-        </div>
-        <img
-          src={imagePrefix + '/imgs/img-computer.png'}
-          alt=''
-          css={css`
-            display: none;
-            position: absolute;
-            top: 0;
-            z-index: -1;
+                display: inline;
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: opacity 0.2s, transform 0.5s;
 
-            @media (min-width: 900px) {
-              display: inline;
-            }
-          `}
-        />
+                &.animate {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+            `}
+          />
+        </Animator>
       </div>
 
       <div

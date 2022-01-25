@@ -6,6 +6,7 @@ import {
   oneMobileRegular,
 } from '../../../common/utils/font-loader'
 import contents from './department.json'
+import Animator from '../../../common/utils/Animator'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
@@ -46,19 +47,27 @@ export default function Department({currentLangCode}: LocalePageProps) {
           }
         `}
       >
-        <img
-          src={imagePrefix + '/imgs/img-rira-postit.gif'}
-          alt=''
-          css={css`
-            width: 100%;
+        <Animator>
+          <img
+            src={imagePrefix + '/imgs/img-rira-postit.gif'}
+            alt=''
+            css={css`
+              transform: translateX(-50px);
+              transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+              width: 100%;
 
-            @media (min-width: 900px) {
-              margin-left: -68px;
-              margin-top: 10px;
-              width: 480px;
-            }
-          `}
-        />
+              @media (min-width: 900px) {
+                margin-left: -68px;
+                margin-top: 10px;
+                width: 480px;
+              }
+
+              &.animate {
+                transform: translateX(0);
+              }
+            `}
+          />
+        </Animator>
         <div
           css={css`
             display: flex;
