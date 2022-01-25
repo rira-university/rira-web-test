@@ -1,13 +1,9 @@
 import {css} from '@emotion/react'
-import {LocalePageProps} from '../../../common/lib/locales'
 import {oneMobilePop} from '../../../common/utils/font-loader'
-import contents from './partners.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Partners({currentLangCode}: LocalePageProps) {
-  const content = contents[currentLangCode]
-
+export default function Partners() {
   return (
     <section
       css={css`
@@ -35,7 +31,7 @@ export default function Partners({currentLangCode}: LocalePageProps) {
           }
         `}
       >
-        {content.title}
+        Partners
       </h2>
       <p
         css={css`

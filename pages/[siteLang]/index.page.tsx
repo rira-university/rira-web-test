@@ -6,12 +6,16 @@ import Activity from './sections/activity'
 import Department from './sections/department'
 import TeachingAssistant from './sections/teaching-assistant'
 import Roadmap from './sections/roadmap'
-import {LangCode, LocalePageProps} from '../../common/lib/locales'
-import Partners from '@/pages/[langCode]/sections/partners'
+import {
+  langCodeForSiteLanguage,
+  LocalePageProps,
+  SiteLanguage,
+} from '../../common/lib/locales'
+import Partners from '@/pages/[siteLang]/sections/partners'
 import {useEffect} from 'react'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
-  const {currentLangCode} = localePageProps
+  const {currentSiteLang} = localePageProps
 
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -19,10 +23,9 @@ export default function IndexPage(localePageProps: LocalePageProps) {
         e.preventDefault()
         const target = e.currentTarget as HTMLAnchorElement
         const targetSelector = target.getAttribute('href') || '#'
-        // @ts-ignore
         document
           .querySelector(targetSelector === '#' ? 'body' : targetSelector)
-          .scrollIntoView({
+          ?.scrollIntoView({
             behavior: 'smooth',
           })
       })
@@ -32,22 +35,20 @@ export default function IndexPage(localePageProps: LocalePageProps) {
   return (
     <>
       <Head>
-        {Object.values(LangCode)
-          .filter((langCode) => langCode !== currentLangCode)
-          .map((langCode) => (
-            <link
-              key={langCode}
-              rel='alternate'
-              hrefLang={langCode}
-              href={`https://rira.university/${langCode}`}
-            />
-          ))}
+        {Object.values(SiteLanguage).map((siteLang) => (
+          <link
+            key={langCodeForSiteLanguage[siteLang]}
+            rel='alternate'
+            hrefLang={langCodeForSiteLanguage[siteLang]}
+            href={`https://rira.university/${siteLang}`}
+          />
+        ))}
       </Head>
 
       <main
         css={css`
           overflow: hidden;
-          ${currentLangCode === LangCode.Kr && 'word-break: keep-all'}
+          ${currentSiteLang === SiteLanguage.Kr && 'word-break: keep-all'}
         `}
       >
         <Cover {...localePageProps} />
@@ -56,17 +57,17 @@ export default function IndexPage(localePageProps: LocalePageProps) {
         <Department {...localePageProps} />
         <TeachingAssistant {...localePageProps} />
         <Roadmap {...localePageProps} />
-        <Partners {...localePageProps} />
+        <Partners />
       </main>
     </>
   )
 }
 
 export async function getStaticPaths() {
-  const paths = Object.values(LangCode).map((langCode: LangCode) => {
+  const paths = Object.values(SiteLanguage).map((siteLang: SiteLanguage) => {
     return {
       params: {
-        langCode: langCode,
+        siteLang: siteLang,
       },
     }
   })
@@ -77,10 +78,14 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({params}: {params: {langCode: LangCode}}) {
+export async function getStaticProps({
+  params,
+}: {
+  params: {siteLang: SiteLanguage}
+}) {
   return {
     props: {
-      currentLangCode: params.langCode,
+      currentSiteLang: params.siteLang,
     },
   }
 }

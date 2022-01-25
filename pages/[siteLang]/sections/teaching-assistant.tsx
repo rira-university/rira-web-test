@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {LangCode, LocalePageProps} from '../../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '../../../common/lib/locales'
 import {
   notoSansJp,
   oneMobilePop,
@@ -9,8 +9,8 @@ import contents from './teaching-assistant.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
-  const content = contents[currentLangCode]
+export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
+  const content = contents[currentSiteLang]
 
   return (
     <section
@@ -134,7 +134,7 @@ export default function TeachingAssistant({currentLangCode}: LocalePageProps) {
 
             > p {
               color: #000;
-              font-family: ${currentLangCode === LangCode.Jp
+              font-family: ${currentSiteLang === SiteLanguage.Jp
                   ? notoSansJp
                   : oneMobileRegular},
                 sans-serif;

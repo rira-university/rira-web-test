@@ -1,12 +1,12 @@
 import {useState} from 'react'
 import Link from 'next/link'
 import {css} from '@emotion/react'
-import {LangCode, LocalePageProps} from '../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '../common/lib/locales'
 import {baloo2, balooDa2} from '../common/utils/font-loader'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Navbar({currentLangCode}: LocalePageProps) {
+export default function Navbar({currentSiteLang}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const closeMenu = () => setIsMenuOpened(false)
 
@@ -177,13 +177,13 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
             }
           `}
         >
-          {Object.values(LangCode).map((langCode) => (
-            <Link key={langCode} href={`/${langCode}`}>
+          {Object.values(SiteLanguage).map((siteLang) => (
+            <Link key={siteLang} href={`/${siteLang}`}>
               <a
-                href={`/${langCode}`}
+                href={`/${siteLang}`}
                 onClick={closeMenu}
                 css={css`
-                  color: ${langCode === currentLangCode
+                  color: ${siteLang === currentSiteLang
                     ? '#969696'
                     : '#c8c8c8'};
                   font-family: ${balooDa2}, sans-serif;
@@ -200,7 +200,7 @@ export default function Navbar({currentLangCode}: LocalePageProps) {
                   }
                 `}
               >
-                {langCode.toUpperCase()}
+                {siteLang.toUpperCase()}
               </a>
             </Link>
           ))}

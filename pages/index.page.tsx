@@ -1,33 +1,21 @@
-import Head from 'next/head'
-import {LangCode} from '../common/lib/locales'
+import {langCodeForSiteLanguage, SiteLanguage} from '../common/lib/locales'
+import {useEffect} from 'react'
 
 export default function IndexPage() {
-  return (
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            const supportedLanguages = {en: '${LangCode.En}', ja: '${LangCode.Jp}', ko: '${LangCode.Kr}'}
-            let matched = false // window.location has some delay, so it may cause wrong result.
-        
-            navigator.languages.forEach((tags) => {
-              if (matched) {
-                return
-              }
-        
-              const langCode = tags.substring(0, 2)
-              if (supportedLanguages[langCode]) {
-                matched = true
-                window.location = supportedLanguages[langCode]
-              }
-            })
-        
-            if (!matched) {
-              window.location = '${LangCode.En}'
-            }
-          `,
-        }}
-      />
-    </Head>
-  )
+  useEffect(() => {
+    const swap = ([a, b]: [any, any]) => [b, a]
+    const siteLanguageForLangCode = Object.fromEntries(
+      Object.entries(langCodeForSiteLanguage).map(swap),
+    )
+
+    const targetLangCode = navigator.languages
+      .map((languageTag) => languageTag.substring(0, 2))
+      .find((langCode) => siteLanguageForLangCode[langCode])
+
+    window.location.href = targetLangCode
+      ? siteLanguageForLangCode[targetLangCode]
+      : SiteLanguage.En
+  })
+
+  return null
 }

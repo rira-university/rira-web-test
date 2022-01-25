@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {LangCode, LocalePageProps} from '../../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '../../../common/lib/locales'
 import {
   notoSansJp,
   oneMobilePop,
@@ -10,8 +10,8 @@ import Animator from '../../../common/utils/Animator'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Roadmap({currentLangCode}: LocalePageProps) {
-  const content = contents[currentLangCode]
+export default function Roadmap({currentSiteLang}: LocalePageProps) {
+  const content = contents[currentSiteLang]
 
   return (
     <section
@@ -108,12 +108,12 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
                   border-radius: 6px;
                   color: #fff;
                   display: flex;
-                  font-family: ${currentLangCode === LangCode.Jp
+                  font-family: ${currentSiteLang === SiteLanguage.Jp
                       ? notoSansJp
                       : oneMobilePop},
                     sans-serif;
                   font-size: 20px;
-                  font-weight: ${currentLangCode === LangCode.Jp
+                  font-weight: ${currentSiteLang === SiteLanguage.Jp
                     ? 'bold'
                     : 'normal'};
                   height: 36px;
@@ -136,7 +136,7 @@ export default function Roadmap({currentLangCode}: LocalePageProps) {
 
                 > p {
                   color: #000;
-                  font-family: ${currentLangCode === LangCode.Jp
+                  font-family: ${currentSiteLang === SiteLanguage.Jp
                       ? notoSansJp
                       : oneMobileRegular},
                     sans-serif;

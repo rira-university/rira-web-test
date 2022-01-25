@@ -1,13 +1,13 @@
 import {css} from '@emotion/react'
 import {LocalePageProps} from '../../../common/lib/locales'
 import {baloo2} from '../../../common/utils/font-loader'
-import contents from './cover.json'
 import Animator from '../../../common/utils/Animator'
+import contents from './cover.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function Cover({currentLangCode}: LocalePageProps) {
-  const content = contents[currentLangCode]
+export default function Cover({currentSiteLang}: LocalePageProps) {
+  const content = contents[currentSiteLang]
 
   return (
     <section
@@ -55,7 +55,7 @@ export default function Cover({currentLangCode}: LocalePageProps) {
       </Animator>
       <Animator>
         <img
-          src={imagePrefix + `/imgs/title-${currentLangCode}.png`}
+          src={imagePrefix + `/imgs/title-${currentSiteLang}.png`}
           alt={content.welcomeImageAlt}
           css={css`
             margin-top: 10px;
