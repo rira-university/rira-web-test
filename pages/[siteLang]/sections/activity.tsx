@@ -99,7 +99,7 @@ export default function Activity() {
               }
             `}
           >
-            D-2
+            D-1
           </span>
         </a>
       </div>
