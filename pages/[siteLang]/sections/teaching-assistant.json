@@ -14,8 +14,8 @@
       "description": "Director of the Overseas Cooperation Center at RIT and is in charge of publicity and overseas communications."
     },
     "ta4": {
-      "name": "Mick",
-      "description": "He leads Korean Team. He secretly aims for the position of the Vice President."
+      "name": "TREE",
+      "description": "Manager of General Affairs Office. She wants to meet E-MATE who likes rockets."
     },
     "ta5": {
       "name": "Doge",
@@ -27,7 +27,7 @@
     },
     "ta7": {
       "name": "Luluralo",
-      "description": "I am a guard of RIT. Trust me and RIT's safety."
+      "description": "He is the head of the Korea team. When the university was built, he carried the bricks directly."
     }
   },
   "jp": {
@@ -45,8 +45,8 @@
       "description": "海外協力センター長です。大学の広報や海外発信をしています。"
     },
     "ta4": {
-      "name": "Mick",
-      "description": "RITの韓国チーム長です。副学長になるという野望があります。"
+      "name": "TREE",
+      "description": "RITの総務室長です。ロケットが好きなE-MATEに憧れています。"
     },
     "ta5": {
       "name": "Doge",
@@ -58,7 +58,7 @@
     },
     "ta7": {
       "name": "Luluralo",
-      "description": "RITの警備所長です。RITの治安は僕に任してください。"
+      "description": "RITの韓国チーム長です。大学が建てられるとき、直接レンガを運びました。"
     }
   },
   "kr": {
@@ -76,8 +76,8 @@
       "description": "RIT의 해외 협력 센터장입니다. 대학의 홍보나 해외 발신을 하고 있습니다."
     },
     "ta4": {
-      "name": "Mick",
-      "description": "RIT의 한국 팀장이자 교직원입니다. 부총장직을 노리고 있습니다."
+      "name": "TREE",
+      "description": "RIT의 총무실장입니다. 로켓을 좋아하는 E-MATE를 만나고 싶어합니다."
     },
     "ta5": {
       "name": "Doge",
@@ -89,7 +89,7 @@
     },
     "ta7": {
       "name": "Luluralo",
-      "description": "RIT의 경비소장입니다. RIT의 치안은 저에게 맡겨주세요."
+      "description": "RIT의 한국팀장입니다. 리라공대가 지어질 때 직접 벽돌을 날랐습니다."
     }
   }
 }
