@@ -73,7 +73,9 @@ export default function Activity() {
           css={css`
             position: relative;
           `}
-          onClick={() => alert('It opens at 21:50.')}
+          href='https://admission.rira.university/'
+          target='_blank'
+          rel='noreferrer'
         >
           <img
             src={require('@/imgs/link-home.svg')}
@@ -98,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            D-0
+            WL1
           </span>
         </a>
       </div>
