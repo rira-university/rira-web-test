@@ -12,11 +12,15 @@
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-svgo": "^9.0.0",
     "next": "^12.0.8",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "responsive-loader": "^2.3.0",
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.37.2",

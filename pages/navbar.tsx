@@ -4,8 +4,6 @@ import {css} from '@emotion/react'
 import {LocalePageProps, SiteLanguage} from '../common/lib/locales'
 import {baloo2, balooDa2} from '../common/utils/font-loader'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
 export default function Navbar({currentSiteLang}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const closeMenu = () => setIsMenuOpened(false)
@@ -43,12 +41,20 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           }
         `}
       >
-        <a href='#'>
+        <a
+          href='#'
+          css={css`
+            display: flex;
+          `}
+        >
           <img
-            src={imagePrefix + '/imgs/logo-rit.png'}
+            src={require('@/imgs/logo-rit.png')}
+            height={63}
+            width={219}
             alt='RIT logo'
             css={css`
               display: flex;
+              height: auto;
               object-fit: contain;
               width: 109px;
 
@@ -59,7 +65,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           />
         </a>
         <img
-          src={imagePrefix + '/imgs/icon-menu.png'}
+          src={require('@/imgs/icon-menu.svg')}
           alt='Menu button'
           onClick={() => setIsMenuOpened(!isMenuOpened)}
           css={css`

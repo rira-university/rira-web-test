@@ -1,8 +1,6 @@
 import {css} from '@emotion/react'
 import {balooDa2} from '../../../common/utils/font-loader'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
 export default function Activity() {
   return (
     <section
@@ -43,6 +41,7 @@ export default function Activity() {
           }
 
           img {
+            height: auto;
             width: 120px;
 
             @media (min-width: 1200px) {
@@ -77,7 +76,7 @@ export default function Activity() {
           onClick={() => alert('It opens at 21:50.')}
         >
           <img
-            src={imagePrefix + '/imgs/link-home.png'}
+            src={require('@/imgs/link-home.svg')}
             alt='Go to Mint'
             css={css``}
           />
@@ -105,23 +104,21 @@ export default function Activity() {
       </div>
       <div css={css``}>
         <img
-          src={imagePrefix + '/imgs/link-tomoz.png'}
+          src={require('@/imgs/link-tomoz.svg')}
           alt='Go to Tomoz'
           css={css``}
         />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
-        <img
-          src={imagePrefix + '/imgs/link-lab.png'}
-          alt='Go to Lab'
-          css={css``}
-        />
+        <img src={require('@/imgs/link-lab.svg')} alt='Go to Lab' css={css``} />
         <span css={css``}>Coming Soon</span>
       </div>
       <div css={css``}>
         <img
-          src={imagePrefix + '/imgs/link-comingsoon.png'}
+          src={require('@/imgs/link-comingsoon.svg')}
+          height={160}
+          width={120}
           alt='Coming Soon'
           css={css``}
         />

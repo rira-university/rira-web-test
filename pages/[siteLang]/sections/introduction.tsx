@@ -8,7 +8,7 @@ import {
 import contents from './introduction.json'
 import Animator from '../../../common/utils/Animator'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const imgSchoolResponsive = require('@/imgs/img-school.png?resize')
 
 export default function Introduction({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
@@ -65,15 +65,25 @@ export default function Introduction({currentSiteLang}: LocalePageProps) {
         `}
       >
         <img
-          src={imagePrefix + '/imgs/img-school.png'}
+          src={require('@/imgs/img-school.png')}
+          srcSet={`${require('@/imgs/img-school.png')}, ${require('@/imgs/img-school@2x.png')} 2x, ${require('@/imgs/img-school@3x.png')} 3x`}
+          height={imgSchoolResponsive.height}
+          width={imgSchoolResponsive.width}
           alt=''
           css={css`
+            background: no-repeat center/90%
+              url(${imgSchoolResponsive.placeholder});
+            height: auto;
             width: 100%;
+
+            &.onload {
+              background-image: none;
+            }
           `}
         />
         <Animator>
           <img
-            src={imagePrefix + '/imgs/img-graduation.png'}
+            src={require('@/imgs/img-graduation.svg')}
             alt=''
             css={css`
               display: none;
@@ -96,7 +106,7 @@ export default function Introduction({currentSiteLang}: LocalePageProps) {
         </Animator>
         <Animator>
           <img
-            src={imagePrefix + '/imgs/img-lightbulb.png'}
+            src={require('@/imgs/img-lightbulb.svg')}
             alt=''
             css={css`
               display: none;
@@ -150,9 +160,12 @@ export default function Introduction({currentSiteLang}: LocalePageProps) {
       <p css={css``}>{content.paragraph1}</p>
       <p css={css``}>{content.paragraph2}</p>
       <img
-        src={imagePrefix + '/imgs/img-lab.png'}
+        src={require('@/imgs/img-lab.svg')}
+        height={648}
+        width={1333}
         alt=''
         css={css`
+          height: auto;
           margin-top: -70px;
           position: relative;
           width: 658px;

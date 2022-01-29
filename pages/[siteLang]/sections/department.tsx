@@ -8,7 +8,8 @@ import {
 import contents from './department.json'
 import Animator from '../../../common/utils/Animator'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const bgSection04Responsive = require('@/imgs/bg-section-04.png?resize')
+const bgSection04Svg = require('@/imgs/bg-section-04.svg')
 
 export default function Department({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
@@ -49,9 +50,16 @@ export default function Department({currentSiteLang}: LocalePageProps) {
       >
         <Animator>
           <img
-            src={imagePrefix + '/imgs/img-rira-postit.gif'}
+            src={require('@/imgs/img-rira-postit.gif')}
+            height={280}
+            width={280}
+            sizes='100%, (min-width: 900px) 480px'
+            loading='lazy'
             alt=''
             css={css`
+              background: center/cover
+                url(${require('@/imgs/img-rira-postit.png?resize').placeholder});
+              height: auto;
               transform: translateX(-50px);
               transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
               width: 100%;
@@ -199,6 +207,7 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
 
             img {
+              height: auto;
               width: 200px;
 
               @media (min-width: 900px) {
@@ -262,7 +271,7 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/imgs/img-class-finance.png'} alt='' />
+          <img src={require('@/imgs/img-class-finance.svg')} alt='' />
           <h3>{content.financialEngineering.title}</h3>
           <p>{content.financialEngineering.description}</p>
         </div>
@@ -275,7 +284,13 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/imgs/img-class-space.png'} alt='' />
+          <img
+            src={require('@/imgs/img-class-space.svg')}
+            height={200}
+            width={200}
+            loading='lazy'
+            alt=''
+          />
           <h3>{content.aerospaceEngineering.title}</h3>
           <p>{content.aerospaceEngineering.description}</p>
         </div>
@@ -288,7 +303,15 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/imgs/img-class-computer.png'} alt='' />
+          <img
+            src={require('@/imgs/img-class-computer.png')}
+            srcSet={`${require('@/imgs/img-class-computer.png')}, ${require('@/imgs/img-class-computer@2x.png')} 2x, ${require('@/imgs/img-class-computer@3x.png')} 3x`}
+            height={200}
+            width={200}
+            sizes='200px, (min-width: 900px) 100%'
+            loading='lazy'
+            alt=''
+          />
           <h3>{content.computerEngineering.title}</h3>
           <p>{content.computerEngineering.description}</p>
         </div>
@@ -301,7 +324,7 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/imgs/img-class-chemistry.png'} alt='' />
+          <img src={require('@/imgs/img-class-chemistry.svg')} alt='' />
           <h3>{content.chemistry.title}</h3>
           <p>{content.chemistry.description}</p>
         </div>
@@ -314,15 +337,17 @@ export default function Department({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <img src={imagePrefix + '/imgs/img-class-electric.png'} alt='' />
+          <img src={require('@/imgs/img-class-electric.svg')} alt='' />
           <h3>{content.electricalEngineering.title}</h3>
           <p>{content.electricalEngineering.description}</p>
         </div>
       </div>
       <img
-        src={imagePrefix + '/imgs/bg-section-04.png'}
+        src={bgSection04Svg}
+        loading='lazy'
         alt=''
         css={css`
+          background: center/cover url(${bgSection04Responsive.placeholder});
           height: 100%;
           object-fit: cover;
           position: absolute;

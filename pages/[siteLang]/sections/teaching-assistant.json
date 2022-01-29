@@ -1,95 +1,103 @@
 {
   "en": {
     "title": "Teaching Assistant",
-    "ta1": {
-      "name": "Tommy",
-      "description": "He is the head of the Japan team and the first Vice President of RIRA Institute of Technology."
-    },
-    "ta2": {
-      "name": "Ame-chan",
-      "description": "The student director of RIT the person who drew TOMOZ."
-    },
-    "ta3": {
-      "name": "Gumi-chan",
-      "description": "Director of the Overseas Cooperation Center at RIT and is in charge of publicity and overseas communications."
-    },
-    "ta4": {
-      "name": "TREE",
-      "description": "Manager of General Affairs Office. She wants to meet E-MATE who likes rockets."
-    },
-    "ta5": {
-      "name": "Doge",
-      "description": "He fixes all of the computers of RIT. He works on the blockchain."
-    },
-    "ta6": {
-      "name": "Arvitor",
-      "description": "He is the head of the NFTcircle. He is a pioneer in NFT World and advertise NFTs."
-    },
-    "ta7": {
-      "name": "Luluralo",
-      "description": "He is the head of the Korea team. When the university was built, he carried the bricks directly."
-    }
+    "team": [
+      {
+        "name": "Tommy",
+        "description": "He is the head of the Japan team and the first Vice President of RIRA Institute of Technology."
+      },
+      {
+        "name": "Ame-chan",
+        "description": "The student director of RIT the person who drew TOMOZ."
+      },
+      {
+        "name": "Gumi-chan",
+        "description": "Director of the Overseas Cooperation Center at RIT and is in charge of publicity and overseas communications."
+      },
+      {
+        "name": "TREE",
+        "description": "Manager of General Affairs Office. She wants to meet E-MATE who likes rockets."
+      },
+      {
+        "name": "Doge",
+        "description": "He fixes all of the computers of RIT. He works on the blockchain."
+      },
+      {
+        "name": "Arvitor",
+        "description": "He is the head of the NFTcircle. He is a pioneer in NFT World and advertise NFTs."
+      },
+      {
+        "name": "Luluralo",
+        "description": "He is the head of the Korea team. When the university was built, he carried the bricks directly."
+      }
+    ]
   },
   "jp": {
     "title": "Teaching Assistant",
-    "ta1": {
-      "name": "Tommy",
-      "description": "RIT日本チーム長であり、副学長として働いています。"
-    },
-    "ta2": {
-      "name": "Ame-chan",
-      "description": "RITの学生センター長として勤めており、TOMOZを描いた張本人です。"
-    },
-    "ta3": {
-      "name": "Gumi-chan",
-      "description": "海外協力センター長です。大学の広報や海外発信をしています。"
-    },
-    "ta4": {
-      "name": "TREE",
-      "description": "RITの総務室長です。ロケットが好きなE-MATEに憧れています。"
-    },
-    "ta5": {
-      "name": "Doge",
-      "description": "RITパソコン工学科出身で、彼は大学に存在するすべてのパソコンを直します。"
-    },
-    "ta6": {
-      "name": "Arvitor",
-      "description": "RITのNFT収集サークル長です。NFTの魅力を知らせることで先頭に立ています。"
-    },
-    "ta7": {
-      "name": "Luluralo",
-      "description": "RITの韓国チーム長です。大学が建てられるとき、直接レンガを運びました。"
-    }
+    "team": [
+      {
+        "name": "Tommy",
+        "description": "RIT日本チーム長であり、副学長として働いています。"
+      },
+
+      {
+        "name": "Ame-chan",
+        "description": "RITの学生センター長として勤めており、TOMOZを描いた張本人です。"
+      },
+      {
+        "name": "Gumi-chan",
+        "description": "海外協力センター長です。大学の広報や海外発信をしています。"
+      },
+      {
+        "name": "TREE",
+        "description": "RITの総務室長です。ロケットが好きなE-MATEに憧れています。"
+      },
+      {
+        "name": "Doge",
+        "description": "RITパソコン工学科出身で、彼は大学に存在するすべてのパソコンを直します。"
+      },
+      {
+        "name": "Arvitor",
+        "description": "RITのNFT収集サークル長です。NFTの魅力を知らせることで先頭に立ています。"
+      },
+      {
+        "name": "Luluralo",
+        "description": "RITの韓国チーム長です。大学が建てられるとき、直接レンガを運びました。"
+      }
+    ]
   },
   "kr": {
     "title": "Teaching Assistant",
-    "ta1": {
-      "name": "Tommy",
-      "description": "RIT의 일본 팀장이자 부총장님입니다. TOMOZ 커뮤티니를 유지하고 있습니다."
-    },
-    "ta2": {
-      "name": "Ame-chan",
-      "description": "RIT의 학생처장입니다. TOMOZ 컬렉션을 그려주었습니다."
-    },
-    "ta3": {
-      "name": "Gumi-chan",
-      "description": "RIT의 해외 협력 센터장입니다. 대학의 홍보나 해외 발신을 하고 있습니다."
-    },
-    "ta4": {
-      "name": "TREE",
-      "description": "RIT의 총무실장입니다. 로켓을 좋아하는 E-MATE를 만나고 싶어합니다."
-    },
-    "ta5": {
-      "name": "Doge",
-      "description": "RIT의 컴퓨터 수리기사입니다. 블록체인 위에서 노동을 하고 있습니다."
-    },
-    "ta6": {
-      "name": "Arvitor",
-      "description": "RIT의 NFT수집동아리장입니다. NFT의 매력을 알리는데 앞장서고 있습니다."
-    },
-    "ta7": {
-      "name": "Luluralo",
-      "description": "RIT의 한국팀장입니다. 리라공대가 지어질 때 직접 벽돌을 날랐습니다."
-    }
+    "team": [
+      {
+        "name": "Tommy",
+        "description": "RIT의 일본 팀장이자 부총장님입니다. TOMOZ 커뮤티니를 유지하고 있습니다."
+      },
+
+      {
+        "name": "Ame-chan",
+        "description": "RIT의 학생처장입니다. TOMOZ 컬렉션을 그려주었습니다."
+      },
+      {
+        "name": "Gumi-chan",
+        "description": "RIT의 해외 협력 센터장입니다. 대학의 홍보나 해외 발신을 하고 있습니다."
+      },
+      {
+        "name": "TREE",
+        "description": "RIT의 총무실장입니다. 로켓을 좋아하는 E-MATE를 만나고 싶어합니다."
+      },
+      {
+        "name": "Doge",
+        "description": "RIT의 컴퓨터 수리기사입니다. 블록체인 위에서 노동을 하고 있습니다."
+      },
+      {
+        "name": "Arvitor",
+        "description": "RIT의 NFT수집동아리장입니다. NFT의 매력을 알리는데 앞장서고 있습니다."
+      },
+      {
+        "name": "Luluralo",
+        "description": "RIT의 한국팀장입니다. 리라공대가 지어질 때 직접 벽돌을 날랐습니다."
+      }
+    ]
   }
 }

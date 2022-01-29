@@ -4,7 +4,8 @@ import {baloo2} from '../../../common/utils/font-loader'
 import Animator from '../../../common/utils/Animator'
 import contents from './cover.json'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const bgSection01Responsive = require('@/imgs/bg-section-01.png?resize')
+const bgSection01Svg = require('@/imgs/bg-section-01.svg')
 
 export default function Cover({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
@@ -55,7 +56,9 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
       </Animator>
       <Animator>
         <img
-          src={imagePrefix + `/imgs/title-${currentSiteLang}.png`}
+          src={require(`../../../public/imgs/title-${currentSiteLang}.svg`)} // ts module resolution doesn't work with interpolation
+          height={200}
+          width={580}
           alt={content.welcomeImageAlt}
           css={css`
             margin-top: 10px;
@@ -79,9 +82,10 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
         />
       </Animator>
       <img
-        src={imagePrefix + '/imgs/bg-section-01.png'}
+        src={bgSection01Svg}
         alt=''
         css={css`
+          background: center/cover url(${bgSection01Responsive.placeholder});
           height: 100%;
           object-fit: cover;
           position: absolute;
@@ -102,9 +106,13 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
           `}
         >
           <img
-            src={imagePrefix + '/imgs/character-sub-04.png'}
+            src={require('@/imgs/character-sub-04.png')}
+            srcSet={`${require('@/imgs/character-sub-04.png')}, ${require('@/imgs/character-sub-04@2x.png')} 2x, ${require('@/imgs/character-sub-04@3x.png')} 3x`}
+            height={144}
+            width={144}
             alt=''
             css={css`
+              height: auto;
               margin-right: -90px;
               position: relative;
               transform: translateY(100%);
@@ -123,9 +131,13 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
             `}
           />
           <img
-            src={imagePrefix + '/imgs/character-sub-02.png'}
+            src={require('@/imgs/character-sub-02.png')}
+            srcSet={`${require('@/imgs/character-sub-02.png')}, ${require('@/imgs/character-sub-02@2x.png')} 2x, ${require('@/imgs/character-sub-02@3x.png')} 3x`}
+            height={180}
+            width={180}
             alt=''
             css={css`
+              height: auto;
               position: relative;
               transform: translateY(100%);
               transition: transform 0.5s 0.2s;
@@ -142,9 +154,14 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
             `}
           />
           <img
-            src={imagePrefix + '/imgs/character-main.png'}
+            src={require('@/imgs/character-main.png')}
+            srcSet={`${require('@/imgs/character-main.png')}, ${require('@/imgs/character-main@2x.png')} 2x, ${require('@/imgs/character-main@3x.png')} 3x`}
+            height={260}
+            width={260}
+            sizes='260px, (min-width: 900px) 640px'
             alt=''
             css={css`
+              height: auto;
               margin-left: -100px;
               margin-right: -100px;
               position: relative;
@@ -165,9 +182,13 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
             `}
           />
           <img
-            src={imagePrefix + '/imgs/character-sub-01.png'}
+            src={require('@/imgs/character-sub-01.png')}
+            srcSet={`${require('@/imgs/character-sub-01.png')}, ${require('@/imgs/character-sub-01@2x.png')} 2x, ${require('@/imgs/character-sub-01@3x.png')} 3x`}
+            height={180}
+            width={180}
             alt=''
             css={css`
+              height: auto;
               position: relative;
               transform: translateY(100%);
               transition: transform 0.5s 0.2s;
@@ -184,9 +205,13 @@ export default function Cover({currentSiteLang}: LocalePageProps) {
             `}
           />
           <img
-            src={imagePrefix + '/imgs/character-sub-03.png'}
+            src={require('@/imgs/character-sub-03.png')}
+            srcSet={`${require('@/imgs/character-sub-03.png')}, ${require('@/imgs/character-sub-03@2x.png')} 2x, ${require('@/imgs/character-sub-03@3x.png')} 3x`}
+            height={144}
+            width={144}
             alt=''
             css={css`
+              height: auto;
               margin-left: -90px;
               position: relative;
               transform: translateY(100%);

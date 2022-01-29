@@ -8,7 +8,7 @@ import {
 import contents from './roadmap.json'
 import Animator from '../../../common/utils/Animator'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const imgArrowSvg = require('@/imgs/img-arrow.svg?url')
 
 export default function Roadmap({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
@@ -158,6 +158,7 @@ export default function Roadmap({currentSiteLang}: LocalePageProps) {
               }
 
               > img {
+                height: auto;
                 width: 36px;
 
                 @media (min-width: 900px) {
@@ -172,17 +173,35 @@ export default function Roadmap({currentSiteLang}: LocalePageProps) {
               <h3>{content.step1.name}</h3>
               <p>{content.step1.description}</p>
             </div>
-            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <img
+              src={imgArrowSvg}
+              height={36}
+              width={36}
+              loading='lazy'
+              alt='Next'
+            />
             <div>
               <h3>{content.step2.name}</h3>
               <p>{content.step2.description}</p>
             </div>
-            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <img
+              src={imgArrowSvg}
+              height={36}
+              width={36}
+              loading='lazy'
+              alt='Next'
+            />
             <div>
               <h3>{content.step3.name}</h3>
               <p>{content.step3.description}</p>
             </div>
-            <img src={imagePrefix + '/imgs/img-arrow.png'} alt='Next' />
+            <img
+              src={imgArrowSvg}
+              height={36}
+              width={36}
+              loading='lazy'
+              alt='Next'
+            />
             <div>
               <h3>{content.step4.name}</h3>
               <p>{content.step4.description}</p>
@@ -191,7 +210,8 @@ export default function Roadmap({currentSiteLang}: LocalePageProps) {
         </Animator>
         <Animator>
           <img
-            src={imagePrefix + '/imgs/img-computer.png'}
+            src={require('@/imgs/img-computer.svg')}
+            loading='lazy'
             alt=''
             css={css`
               display: none;
@@ -230,7 +250,8 @@ export default function Roadmap({currentSiteLang}: LocalePageProps) {
       />
 
       <img
-        src={imagePrefix + '/imgs/img-desk.png'}
+        src={require('@/imgs/img-desk.svg?url')}
+        loading='lazy'
         alt=''
         css={css`
           bottom: 8px;

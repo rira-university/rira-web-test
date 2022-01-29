@@ -7,7 +7,7 @@ import {
 } from '../../../common/utils/font-loader'
 import contents from './teaching-assistant.json'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const imgClipboardSvg = require('@/imgs/img-clipboard.svg?url')
 
 export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
@@ -17,6 +17,7 @@ export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
       id='teaching-assistant'
       css={css`
         background-color: #fff0d2;
+        overflow: hidden;
         padding: 40px 0 80px;
         position: relative;
 
@@ -56,7 +57,7 @@ export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
           Teaching Assistant
         </h2>
         <img
-          src={imagePrefix + '/imgs/img-header.png'}
+          src={require('@/imgs/img-header.svg')}
           alt=''
           css={css`
             width: 300px;
@@ -163,79 +164,30 @@ export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
           }
         `}
       >
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team1.png'} alt='' />
-          <h3>{content.ta1.name}</h3>
-          <p>{content.ta1.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team2.png'} alt='' />
-          <h3>{content.ta2.name}</h3>
-          <p>{content.ta2.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team3.png'} alt='' />
-          <h3>{content.ta3.name}</h3>
-          <p>{content.ta3.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team4.png'} alt='' />
-          <h3>{content.ta4.name}</h3>
-          <p>{content.ta4.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team5.png'} alt='' />
-          <h3>{content.ta5.name}</h3>
-          <p>{content.ta5.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team6.png'} alt='' />
-          <h3>{content.ta6.name}</h3>
-          <p>{content.ta6.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
-        <div css={css``}>
-          <img src={imagePrefix + '/imgs/img-team7.png'} alt='' />
-          <h3>{content.ta7.name}</h3>
-          <p>{content.ta7.description}</p>
-          <img
-            src={imagePrefix + '/imgs/img-clipboard.png'}
-            alt=''
-            css={css``}
-          />
-        </div>
+        {[1, 2, 3, 4, 5, 6, 7].map((n, i) => {
+          const imgTeamResponsive = require(`../../../public/imgs/img-team${n}.png?resize&sizes[]=240&sizes[]=480&sizes[]=720`)
+
+          return (
+            <div key={n} css={css``}>
+              <img
+                src={imgTeamResponsive.src}
+                srcSet={imgTeamResponsive.srcSet}
+                height={imgTeamResponsive.height}
+                width={imgTeamResponsive.width}
+                sizes='172px, (min-width: 900px) 240px'
+                loading='lazy'
+                alt=''
+              />
+              <h3>{content.team[i].name}</h3>
+              <p>{content.team[i].description}</p>
+              <img src={imgClipboardSvg} loading='lazy' alt='' css={css``} />
+            </div>
+          )
+        })}
       </div>
       <img
-        src={imagePrefix + '/imgs/bg-section-05.png'}
+        src={require('@/imgs/bg-section-05.svg')}
+        loading='lazy'
         alt=''
         css={css`
           bottom: 0;

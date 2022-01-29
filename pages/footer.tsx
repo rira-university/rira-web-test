@@ -1,8 +1,6 @@
 import {css} from '@emotion/react'
 import {balooDa2} from '../common/utils/font-loader'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
 export default function Footer() {
   return (
     <footer
@@ -44,7 +42,7 @@ export default function Footer() {
           rel='noreferrer'
         >
           <img
-            src={imagePrefix + '/imgs/icon-twitter.png'}
+            src={require('../public/imgs/icon-twitter.svg')}
             alt='Twitter logo'
           />
         </a>
@@ -53,14 +51,21 @@ export default function Footer() {
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/imgs/icon-kakao.png'} alt='Kakao logo' />
+          <img
+            src={require('../public/imgs/icon-kakao.png')}
+            alt='Kakao logo'
+          />
         </a>
         <a
           href='https://github.com/rira-university/'
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/imgs/icon-github.png'} alt='GitHub logo' />
+          <img
+            src={require('../public/imgs/icon-github.svg')}
+            loading='lazy'
+            alt='GitHub logo'
+          />
         </a>
         <a
           href='https://discord.com/invite/4mX3gBRDWt'
@@ -68,7 +73,7 @@ export default function Footer() {
           rel='noreferrer'
         >
           <img
-            src={imagePrefix + '/imgs/icon-discord.png'}
+            src={require('../public/imgs/icon-discord.svg')}
             alt='Discord logo'
           />
         </a>
@@ -77,7 +82,10 @@ export default function Footer() {
           target='_blank'
           rel='noreferrer'
         >
-          <img src={imagePrefix + '/imgs/icon-medium.png'} alt='Medium logo' />
+          <img
+            src={require('../public/imgs/icon-medium.svg')}
+            alt='Medium logo'
+          />
         </a>
       </div>
       <span

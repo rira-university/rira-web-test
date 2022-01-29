@@ -1,8 +1,6 @@
 import {css} from '@emotion/react'
 import {oneMobilePop} from '../../../common/utils/font-loader'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
 export default function Partners() {
   return (
     <section
@@ -65,9 +63,15 @@ export default function Partners() {
         `}
       >
         <img
-          src={imagePrefix + '/imgs/logo-girl.png'}
+          src={require('@/imgs/logo-girl.png')}
+          srcSet={`${require('@/imgs/logo-girl.png')}, ${require('@/imgs/logo-girl@2x.png')} 2x, ${require('@/imgs/logo-girl@3x.png')} 3x`}
+          height={120}
+          width={120}
+          sizes='120px, (min-width: 900px) 300px'
+          loading='lazy'
           alt='Rira logo'
           css={css`
+            height: auto;
             width: 120px;
 
             @media (min-width: 900px) {
@@ -76,7 +80,7 @@ export default function Partners() {
           `}
         />
         <img
-          src={imagePrefix + '/imgs/img-partnersx.png'}
+          src={require('@/imgs/img-partnersx.svg')}
           alt='Cross symbol'
           css={css`
             margin-left: 8px;
@@ -88,9 +92,15 @@ export default function Partners() {
           `}
         />
         <img
-          src={imagePrefix + '/imgs/logo-dogesound.png'}
+          src={require('@/imgs/logo-dogesound.png')}
+          srcSet={`${require('@/imgs/logo-dogesound.png')}, ${require('@/imgs/logo-dogesound@2x.png')} 2x, ${require('@/imgs/logo-dogesound@3x.png')} 3x`}
+          height={120}
+          width={120}
+          sizes='120px, (min-width: 900px) 300px'
+          loading='lazy'
           alt='Doge Sound Club logo'
           css={css`
+            height: auto;
             margin-left: 8px;
             width: 120px;
 
