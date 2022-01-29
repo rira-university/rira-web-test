@@ -37,6 +37,26 @@ export default function Footer() {
         `}
       >
         <a
+          href='https://opensea.io/collection/rira-institute-of-technology-tomoz/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img
+            src={require('../public/imgs/icon-opensea.svg')}
+            alt='OpenSea logo'
+          />
+        </a>
+        <a
+          href='https://twitter.com/RiraUniversity'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img
+            src={require('../public/imgs/icon-twitter.svg')}
+            alt='Twitter logo'
+          />
+        </a>
+        <a
           href='https://twitter.com/RiraUniversity'
           target='_blank'
           rel='noreferrer'
