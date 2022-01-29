@@ -57,16 +57,6 @@ export default function Footer() {
           />
         </a>
         <a
-          href='https://twitter.com/RiraUniversity'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img
-            src={require('../public/imgs/icon-twitter.svg')}
-            alt='Twitter logo'
-          />
-        </a>
-        <a
           href='https://open.kakao.com/o/gCz5GkUd'
           target='_blank'
           rel='noreferrer'
