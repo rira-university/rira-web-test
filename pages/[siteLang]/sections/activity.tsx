@@ -99,7 +99,7 @@ export default function Activity() {
               }
             `}
           >
-            D-1
+            D-0
           </span>
         </a>
       </div>
@@ -122,7 +122,7 @@ export default function Activity() {
       <div css={css``}>
         <img
           src={imagePrefix + '/imgs/link-comingsoon.png'}
-          alt='Coming Soon'
+          alt='It opens at 21:50.'
           css={css``}
         />
         <span css={css``}>Coming Soon</span>
