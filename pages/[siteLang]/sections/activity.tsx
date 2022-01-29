@@ -74,7 +74,7 @@ export default function Activity() {
           css={css`
             position: relative;
           `}
-          onClick={() => alert('Coming Soon!')}
+          onClick={() => alert('It opens at 21:50.')}
         >
           <img
             src={imagePrefix + '/imgs/link-home.png'}
@@ -122,7 +122,7 @@ export default function Activity() {
       <div css={css``}>
         <img
           src={imagePrefix + '/imgs/link-comingsoon.png'}
-          alt='It opens at 21:50.'
+          alt='Coming Soon'
           css={css``}
         />
         <span css={css``}>Coming Soon</span>
