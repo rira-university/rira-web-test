@@ -1,12 +1,12 @@
 import {css} from '@emotion/react'
-import {LocalePageProps, SiteLanguage} from '../../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {
   notoSansJp,
   oneMobilePop,
   oneMobileRegular,
-} from '../../../common/utils/font-loader'
+} from '@/common/utils/font-loader'
 import contents from './department.json'
-import Animator from '../../../common/utils/Animator'
+import Animator from '@/common/utils/Animator'
 
 const bgSection04Responsive = require('@/imgs/bg-section-04.png?resize')
 const bgSection04Svg = require('@/imgs/bg-section-04.svg')

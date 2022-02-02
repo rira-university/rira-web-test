@@ -10,7 +10,7 @@ import {
   langCodeForSiteLanguage,
   LocalePageProps,
   SiteLanguage,
-} from '../../common/lib/locales'
+} from '@/common/lib/locales'
 import Partners from '@/pages/[siteLang]/sections/partners'
 import {useEffect} from 'react'
 

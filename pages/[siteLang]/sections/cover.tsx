@@ -1,7 +1,7 @@
 import {css} from '@emotion/react'
-import {LocalePageProps} from '../../../common/lib/locales'
-import {baloo2} from '../../../common/utils/font-loader'
-import Animator from '../../../common/utils/Animator'
+import {LocalePageProps} from '@/common/lib/locales'
+import {baloo2} from '@/common/utils/font-loader'
+import Animator from '@/common/utils/Animator'
 import contents from './cover.json'
 
 const bgSection01Responsive = require('@/imgs/bg-section-01.png?resize')

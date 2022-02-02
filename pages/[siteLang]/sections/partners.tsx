@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {oneMobilePop} from '../../../common/utils/font-loader'
+import {oneMobilePop} from '@/common/utils/font-loader'
 
 export default function Partners() {
   return (

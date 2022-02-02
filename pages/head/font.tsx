@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/google-font-display,@next/next/no-page-custom-font */
 import Head from 'next/head'
-import {LocalePageProps, SiteLanguage} from '../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 
 export default function Font({currentSiteLang}: LocalePageProps) {
   return (

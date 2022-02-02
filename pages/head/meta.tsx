@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {LocalePageProps, SiteLanguage} from '../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import contents from './meta.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
