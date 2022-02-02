@@ -100,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            WL1
+            D-3
           </span>
         </a>
       </div>
