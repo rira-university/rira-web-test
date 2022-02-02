@@ -1,7 +1,8 @@
 import type {ReactElement, ReactNode} from 'react'
 import type {NextPage} from 'next'
 import type {AppProps} from 'next/app'
-import Head from '@/pages/head'
+import Meta from '@/pages/head/meta'
+import Font from '@/pages/head/font'
 import Navbar from '@/pages/navbar'
 import Footer from '@/pages/footer'
 import {useRouter} from 'next/router'
@@ -17,21 +18,26 @@ type AppPropsWithLayout = AppProps & {
 
 export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
   const router = useRouter()
-  const {pathname} = router // pick the one that you need
+  const {pathname} = router
 
   const getLayout = Component.getLayout ?? ((page) => page)
 
   if (pathname === '/') {
     return getLayout(
       <>
-        <Head {...pageProps} />
+        <>
+          <Meta {...pageProps} />
+        </>
         <Component {...pageProps} />
       </>,
     )
   } else {
     return getLayout(
       <>
-        <Head {...pageProps} />
+        <>
+          <Meta {...pageProps} />
+          <Font {...pageProps} />
+        </>
         <Navbar {...pageProps} />
         <Component {...pageProps} />
         <Footer />

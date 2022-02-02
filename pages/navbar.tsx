@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import Link from 'next/link'
 import {css} from '@emotion/react'
-import {LocalePageProps, SiteLanguage} from '../common/lib/locales'
-import {baloo2, balooDa2} from '../common/utils/font-loader'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
+import {baloo2, balooDa2} from '@/common/utils/font-loader'
 
 export default function Navbar({currentSiteLang}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)

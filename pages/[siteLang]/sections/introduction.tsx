@@ -1,12 +1,12 @@
 import {css} from '@emotion/react'
-import {LocalePageProps, SiteLanguage} from '../../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {
   notoSansJp,
   oneMobilePop,
   oneMobileRegular,
-} from '../../../common/utils/font-loader'
+} from '@/common/utils/font-loader'
 import contents from './introduction.json'
-import Animator from '../../../common/utils/Animator'
+import Animator from '@/common/utils/Animator'
 
 const imgSchoolResponsive = require('@/imgs/img-school.png?resize')
 

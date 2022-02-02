@@ -1,4 +1,4 @@
-import {langCodeForSiteLanguage, SiteLanguage} from '../common/lib/locales'
+import {langCodeForSiteLanguage, SiteLanguage} from '@/common/lib/locales'
 import {useEffect} from 'react'
 
 export default function IndexPage() {

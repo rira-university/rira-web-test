@@ -1,10 +1,10 @@
 import {css} from '@emotion/react'
-import {LocalePageProps, SiteLanguage} from '../../../common/lib/locales'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {
   notoSansJp,
   oneMobilePop,
   oneMobileRegular,
-} from '../../../common/utils/font-loader'
+} from '@/common/utils/font-loader'
 import contents from './teaching-assistant.json'
 
 const imgClipboardSvg = require('@/imgs/img-clipboard.svg?url')

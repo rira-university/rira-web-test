@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {balooDa2} from '../common/utils/font-loader'
+import {balooDa2} from '@/common/utils/font-loader'
 
 export default function Footer() {
   return (

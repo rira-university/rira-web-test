@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import {LocalePageProps, SiteLanguage} from '../common/lib/locales'
-import contents from './head.json'
+import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
+import contents from './meta.json'
 
 const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
-export default function MyHead({currentSiteLang}: LocalePageProps) {
+export default function Meta({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang || SiteLanguage.En]
 
   return (
@@ -36,7 +36,9 @@ export default function MyHead({currentSiteLang}: LocalePageProps) {
       <meta property='og:type' content='website' />
       <meta
         property='og:url'
-        content={`https://rira.university/${currentSiteLang}`}
+        content={`https://rira.university/${
+          currentSiteLang || SiteLanguage.En
+        }`}
       />
       <meta property='og:title' content={content.title} />
       <meta property='og:description' content={content.description} />
@@ -48,7 +50,9 @@ export default function MyHead({currentSiteLang}: LocalePageProps) {
       <meta property='twitter:card' content='summary_large_image' />
       <meta
         property='twitter:url'
-        content={`https://rira.university/${currentSiteLang}`}
+        content={`https://rira.university/${
+          currentSiteLang || SiteLanguage.En
+        }`}
       />
       <meta property='twitter:title' content={content.title} />
       <meta property='twitter:description' content={content.description} />
