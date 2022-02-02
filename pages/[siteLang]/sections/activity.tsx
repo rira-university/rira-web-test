@@ -100,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            D-3
+            D-2
           </span>
         </a>
       </div>
