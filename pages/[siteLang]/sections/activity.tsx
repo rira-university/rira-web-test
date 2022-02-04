@@ -100,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            D-1
+            SOON
           </span>
         </a>
       </div>
