@@ -47,37 +47,56 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
             display: flex;
           `}
         >
-          <img
-            src={require('@/imgs/logo-rit.png')}
-            height={63}
-            width={219}
-            alt='RIT logo'
-            css={css`
-              display: flex;
-              height: auto;
-              object-fit: contain;
-              width: 109px;
+          <picture>
+            <source
+              type='image/avif'
+              srcSet={require('@/imgs//logo-rit-1667.avif')}
+              height={32}
+              width={110}
+            />
+            <img
+              src={require('@/imgs/logo-rit-1667.png')}
+              height={32}
+              width={110}
+              alt='RIT logo'
+              css={css`
+                display: flex;
+                height: auto;
+                object-fit: contain;
+                width: 110px;
 
-              @media (min-width: 1200px) {
-                width: 219px;
-              }
-            `}
-          />
+                @media (min-width: 1200px) {
+                  width: 220px;
+                }
+              `}
+            />
+          </picture>
         </a>
-        <img
-          src={require('@/imgs/icon-menu.svg')}
-          alt='Menu button'
+        <div
           onClick={() => setIsMenuOpened(!isMenuOpened)}
           css={css`
             cursor: pointer;
-            object-fit: contain;
+            display: flex;
+            flex-direction: column;
+            height: 17px;
+            justify-content: space-between;
             width: 20px;
 
             @media (min-width: 1200px) {
               display: none;
             }
+
+            > div {
+              background-color: black;
+              border-radius: 5px;
+              height: 3px;
+            }
           `}
-        />
+        >
+          <div />
+          <div />
+          <div />
+        </div>
         <div
           onClick={() => setIsMenuOpened(false)}
           css={css`

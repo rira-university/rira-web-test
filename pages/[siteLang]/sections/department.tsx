@@ -8,9 +8,6 @@ import {
 import contents from './department.json'
 import Animator from '@/common/utils/Animator'
 
-const bgSection04Responsive = require('@/imgs/bg-section-04.png?resize')
-const bgSection04Svg = require('@/imgs/bg-section-04.svg')
-
 export default function Department({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
 
@@ -49,32 +46,35 @@ export default function Department({currentSiteLang}: LocalePageProps) {
         `}
       >
         <Animator>
-          <img
-            src={require('@/imgs/img-rira-postit.gif')}
-            height={280}
-            width={280}
-            sizes='100%, (min-width: 900px) 480px'
-            loading='lazy'
-            alt=''
-            css={css`
-              background: center/cover
-                url(${require('@/imgs/img-rira-postit.png?resize').placeholder});
-              height: auto;
-              transform: translateX(-50px);
-              transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
-              width: 100%;
+          <picture>
+            <source
+              srcSet={require('@/imgs/img-rira-postit.png')}
+              media='(prefers-reduced-motion: reduce)'
+            />
+            <img
+              src={require('@/imgs/img-rira-postit.gif')}
+              height={280}
+              width={280}
+              loading='lazy'
+              alt=''
+              css={css`
+                height: auto;
+                transform: translateX(-50px);
+                transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+                width: 100%;
 
-              @media (min-width: 900px) {
-                margin-left: -68px;
-                margin-top: 10px;
-                width: 480px;
-              }
+                @media (min-width: 900px) {
+                  margin-left: -68px;
+                  margin-top: 10px;
+                  width: 480px;
+                }
 
-              &.animate {
-                transform: translateX(0);
-              }
-            `}
-          />
+                .animate & {
+                  transform: translateX(0);
+                }
+              `}
+            />
+          </picture>
         </Animator>
         <div
           css={css`
@@ -305,10 +305,8 @@ export default function Department({currentSiteLang}: LocalePageProps) {
         >
           <img
             src={require('@/imgs/img-class-computer.png')}
-            srcSet={`${require('@/imgs/img-class-computer.png')}, ${require('@/imgs/img-class-computer@2x.png')} 2x, ${require('@/imgs/img-class-computer@3x.png')} 3x`}
             height={200}
             width={200}
-            sizes='200px, (min-width: 900px) 100%'
             loading='lazy'
             alt=''
           />
@@ -343,11 +341,11 @@ export default function Department({currentSiteLang}: LocalePageProps) {
         </div>
       </div>
       <img
-        src={bgSection04Svg}
+        src={require('@/imgs/bg-section-04.svg')}
         loading='lazy'
         alt=''
         css={css`
-          background: center/cover url(${bgSection04Responsive.placeholder});
+          background: #fff9ea;
           height: 100%;
           object-fit: cover;
           position: absolute;

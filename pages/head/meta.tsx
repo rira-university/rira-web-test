@@ -2,14 +2,12 @@ import Head from 'next/head'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import contents from './meta.json'
 
-const imagePrefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
 export default function Meta({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang || SiteLanguage.En]
 
   return (
     <Head>
-      <link rel='icon' href={imagePrefix + '/imgs/favicon.ico'} />
+      <link rel='icon' href={require('@/imgs/favicon.ico')} />
       <meta charSet='UTF-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <title>{content.title}</title>
@@ -18,19 +16,19 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
       <link
         rel='apple-touch-icon'
         sizes='180x180'
-        href={imagePrefix + '/imgs/apple-touch-icon.png'}
+        href={require('@/imgs/apple-touch-icon.png')}
       />
       <link
         rel='icon'
         type='image/png'
         sizes='32x32'
-        href={imagePrefix + '/imgs/favicon-32x32.png'}
+        href={require('@/imgs/favicon-32x32.png')}
       />
       <link
         rel='icon'
         type='image/png'
         sizes='16x16'
-        href={imagePrefix + '/imgs/favicon-16x16.png'}
+        href={require('@/imgs/favicon-16x16.png')}
       />
 
       <meta property='og:type' content='website' />

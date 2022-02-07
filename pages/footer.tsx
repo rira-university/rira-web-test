@@ -41,30 +41,21 @@ export default function Footer() {
           target='_blank'
           rel='noreferrer'
         >
-          <img
-            src={require('../public/imgs/icon-opensea.svg')}
-            alt='OpenSea logo'
-          />
+          <img src={require('@/imgs/icon-opensea.svg')} alt='OpenSea logo' />
         </a>
         <a
           href='https://twitter.com/RiraUniversity'
           target='_blank'
           rel='noreferrer'
         >
-          <img
-            src={require('../public/imgs/icon-twitter.svg')}
-            alt='Twitter logo'
-          />
+          <img src={require('@/imgs/icon-twitter.svg')} alt='Twitter logo' />
         </a>
         <a
           href='https://open.kakao.com/o/gCz5GkUd'
           target='_blank'
           rel='noreferrer'
         >
-          <img
-            src={require('../public/imgs/icon-kakao.png')}
-            alt='Kakao logo'
-          />
+          <img src={require('@/imgs/icon-kakao-96.png')} alt='Kakao logo' />
         </a>
         <a
           href='https://github.com/rira-university/'
@@ -72,7 +63,7 @@ export default function Footer() {
           rel='noreferrer'
         >
           <img
-            src={require('../public/imgs/icon-github.svg')}
+            src={require('@/imgs/icon-github.svg')}
             loading='lazy'
             alt='GitHub logo'
           />
@@ -82,20 +73,14 @@ export default function Footer() {
           target='_blank'
           rel='noreferrer'
         >
-          <img
-            src={require('../public/imgs/icon-discord.svg')}
-            alt='Discord logo'
-          />
+          <img src={require('@/imgs/icon-discord.svg')} alt='Discord logo' />
         </a>
         <a
           href='https://medium.com/rira-institute-of-technology'
           target='_blank'
           rel='noreferrer'
         >
-          <img
-            src={require('../public/imgs/icon-medium.svg')}
-            alt='Medium logo'
-          />
+          <img src={require('@/imgs/icon-medium.svg')} alt='Medium logo' />
         </a>
       </div>
       <span
