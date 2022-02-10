@@ -40,7 +40,7 @@ export default function IndexPage(localePageProps: LocalePageProps) {
             key={langCodeForSiteLanguage[siteLang]}
             rel='alternate'
             hrefLang={langCodeForSiteLanguage[siteLang]}
-            href={`https://rira.university/${siteLang}`}
+            href={`https://rira.university/${siteLang}/`}
           />
         ))}
       </Head>

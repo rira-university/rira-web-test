@@ -1,12 +1,13 @@
 const path = require('path')
 
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   images: {
     disableStaticImages: true,
   },
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  trailingSlash: true,
   webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack}) => {
     config.module.rules.push({
       test: /\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i,
@@ -36,5 +37,3 @@ const nextConfig = {
     return config
   },
 }
-
-module.exports = nextConfig

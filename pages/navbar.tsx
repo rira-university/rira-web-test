@@ -203,9 +203,9 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           `}
         >
           {Object.values(SiteLanguage).map((siteLang) => (
-            <Link key={siteLang} href={`/${siteLang}`}>
+            <Link key={siteLang} href={`/${siteLang}/`}>
               <a
-                href={`/${siteLang}`}
+                href={`/${siteLang}/`}
                 onClick={closeMenu}
                 css={css`
                   color: ${siteLang === currentSiteLang

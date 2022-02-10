@@ -36,7 +36,7 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
         property='og:url'
         content={`https://rira.university/${
           currentSiteLang || SiteLanguage.En
-        }`}
+        }/`}
       />
       <meta property='og:title' content={content.title} />
       <meta property='og:description' content={content.description} />
@@ -50,7 +50,7 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
         property='twitter:url'
         content={`https://rira.university/${
           currentSiteLang || SiteLanguage.En
-        }`}
+        }/`}
       />
       <meta property='twitter:title' content={content.title} />
       <meta property='twitter:description' content={content.description} />
@@ -62,7 +62,7 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
       <link
         rel='alternate'
         hrefLang='x-default'
-        href={`https://rira.university/${SiteLanguage.En}`}
+        href={`https://rira.university/${SiteLanguage.En}/`}
       />
     </Head>
   )
