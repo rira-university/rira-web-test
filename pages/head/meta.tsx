@@ -1,9 +1,19 @@
 import Head from 'next/head'
-import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
+import {
+  langCodeForSiteLanguage,
+  LocalePageProps,
+  SiteLanguage,
+} from '@/common/lib/locales'
 import contents from './meta.json'
+import {useRouter} from 'next/router'
+
+const baseUrl = 'https://rira.university'
 
 export default function Meta({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang || SiteLanguage.En]
+
+  const router = useRouter()
+  const pathnameAfterSiteLang = router.asPath.slice(4)
 
   return (
     <Head>
@@ -40,10 +50,7 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
       />
       <meta property='og:title' content={content.title} />
       <meta property='og:description' content={content.description} />
-      <meta
-        property='og:image'
-        content='https://rira.university/imgs/meta-image.jpg'
-      />
+      <meta property='og:image' content={`${baseUrl}/imgs/meta-image.jpg`} />
 
       <meta property='twitter:card' content='summary_large_image' />
       <meta
@@ -56,7 +63,7 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
       <meta property='twitter:description' content={content.description} />
       <meta
         property='twitter:image'
-        content='https://rira.university/imgs/meta-image.jpg'
+        content={`${baseUrl}/imgs/meta-image.jpg`}
       />
 
       <link
@@ -64,6 +71,15 @@ export default function Meta({currentSiteLang}: LocalePageProps) {
         hrefLang='x-default'
         href={`https://rira.university/${SiteLanguage.En}/`}
       />
+
+      {Object.values(SiteLanguage).map((siteLang) => (
+        <link
+          key={langCodeForSiteLanguage[siteLang]}
+          rel='alternate'
+          hrefLang={langCodeForSiteLanguage[siteLang]}
+          href={`${baseUrl}/${siteLang}/${pathnameAfterSiteLang}`}
+        />
+      ))}
     </Head>
   )
 }

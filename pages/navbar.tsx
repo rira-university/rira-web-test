@@ -1,12 +1,20 @@
-import {useState} from 'react'
-import Link from 'next/link'
+import {MouseEvent, useState} from 'react'
 import {css} from '@emotion/react'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {baloo2, balooDa2} from '@/common/utils/font-loader'
+import {useRouter} from 'next/router'
 
 export default function Navbar({currentSiteLang}: LocalePageProps) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const closeMenu = () => setIsMenuOpened(false)
+
+  const router = useRouter()
+  const changeSiteLang =
+    (siteLang: SiteLanguage) => (e: MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault()
+      router.push({pathname: router.pathname, query: {siteLang}})
+      closeMenu()
+    }
 
   return (
     <nav
@@ -24,8 +32,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           height: 120px;
           padding: 0 calc(100% * 192 / 1440);
         }
-      `}
-    >
+      `}>
       <div
         css={css`
           align-items: center;
@@ -39,14 +46,12 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           @media (min-width: 1200px) {
             padding: 0;
           }
-        `}
-      >
+        `}>
         <a
           href='#'
           css={css`
             display: flex;
-          `}
-        >
+          `}>
           <picture>
             <source
               type='image/avif'
@@ -91,8 +96,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
               border-radius: 5px;
               height: 3px;
             }
-          `}
-        >
+          `}>
           <div />
           <div />
           <div />
@@ -141,8 +145,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
             transform: translateY(0);
             transition: transform 0s;
           }
-        `}
-      >
+        `}>
         <div
           css={css`
             align-items: flex-end;
@@ -169,8 +172,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
                 padding: 0;
               }
             }
-          `}
-        >
+          `}>
           <a onClick={closeMenu} href='#activity'>
             Activity
           </a>
@@ -200,34 +202,29 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
               margin-left: 40px;
               padding: 0;
             }
-          `}
-        >
+          `}>
           {Object.values(SiteLanguage).map((siteLang) => (
-            <Link key={siteLang} href={`/${siteLang}/`}>
-              <a
-                href={`/${siteLang}/`}
-                onClick={closeMenu}
-                css={css`
-                  color: ${siteLang === currentSiteLang
-                    ? '#969696'
-                    : '#c8c8c8'};
-                  font-family: ${balooDa2}, sans-serif;
-                  font-size: 24px;
-                  font-weight: bold;
-                  letter-spacing: -0.75px;
+            <a
+              key={siteLang}
+              href={`/${siteLang}/`}
+              onClick={changeSiteLang(siteLang)}
+              css={css`
+                color: ${siteLang === currentSiteLang ? '#969696' : '#c8c8c8'};
+                font-family: ${balooDa2}, sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                letter-spacing: -0.75px;
 
-                  &:not(:first-of-type) {
-                    margin-left: 10px;
-                  }
+                &:not(:first-of-type) {
+                  margin-left: 10px;
+                }
 
-                  @media (min-width: 1200px) {
-                    margin: 0;
-                  }
-                `}
-              >
-                {siteLang.toUpperCase()}
-              </a>
-            </Link>
+                @media (min-width: 1200px) {
+                  margin: 0;
+                }
+              `}>
+              {siteLang.toUpperCase()}
+            </a>
           ))}
         </div>
       </div>
