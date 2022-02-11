@@ -1,12 +1,12 @@
 import {useEffect} from 'react'
 import {css} from '@emotion/react'
-import Cover from './sections/cover'
-import Introduction from './sections/introduction'
-import Activity from './sections/activity'
-import Department from './sections/department'
-import TeachingAssistant from './sections/teaching-assistant'
-import Roadmap from './sections/roadmap'
-import Partners from '@/pages/[siteLang]/sections/partners'
+import Cover from './_sections/cover'
+import Introduction from './_sections/introduction'
+import Activity from './_sections/activity'
+import Department from './_sections/department'
+import TeachingAssistant from './_sections/teaching-assistant'
+import Roadmap from './_sections/roadmap'
+import Partners from '@/pages/[siteLang]/_sections/partners'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
@@ -32,7 +32,8 @@ export default function IndexPage(localePageProps: LocalePageProps) {
       css={css`
         overflow: hidden;
         ${currentSiteLang === SiteLanguage.Kr && 'word-break: keep-all'}
-      `}>
+      `}
+    >
       <Cover {...localePageProps} />
       <Introduction {...localePageProps} />
       <Activity />
