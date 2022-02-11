@@ -63,11 +63,9 @@ export default function Partners() {
         `}
       >
         <img
-          src={require('@/imgs/logo-girl.png')}
-          srcSet={`${require('@/imgs/logo-girl.png')}, ${require('@/imgs/logo-girl@2x.png')} 2x, ${require('@/imgs/logo-girl@3x.png')} 3x`}
+          src={require('@/imgs/logo-girl-300.png')}
           height={120}
           width={120}
-          sizes='120px, (min-width: 900px) 300px'
           loading='lazy'
           alt='Rira logo'
           css={css`
@@ -92,11 +90,9 @@ export default function Partners() {
           `}
         />
         <img
-          src={require('@/imgs/logo-dogesound.png')}
-          srcSet={`${require('@/imgs/logo-dogesound.png')}, ${require('@/imgs/logo-dogesound@2x.png')} 2x, ${require('@/imgs/logo-dogesound@3x.png')} 3x`}
+          src={require('@/imgs/logo-dogesound-300.png')}
           height={120}
           width={120}
-          sizes='120px, (min-width: 900px) 300px'
           loading='lazy'
           alt='Doge Sound Club logo'
           css={css`

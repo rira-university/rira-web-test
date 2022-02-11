@@ -1,5 +1,4 @@
-const withPlugins = require('next-compose-plugins')
-const optimizedImages = require('next-optimized-images')
+const path = require('path')
 
 const nextConfig = {
   reactStrictMode: true,
@@ -8,30 +7,34 @@ const nextConfig = {
     disableStaticImages: true,
   },
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack}) => {
+    config.module.rules.push({
+      test: /\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            esModule: false,
+            limit: 1024,
+            name: '[name].[ext]',
+            outputPath: (url, resourcePath, context) => {
+              const relativePath = path.relative(
+                path.join(context, 'public'),
+                resourcePath,
+              )
+
+              return `static/${relativePath.replaceAll(
+                path.sep,
+                path.posix.sep,
+              )}`
+            },
+          },
+        },
+      ],
+    })
+
+    return config
+  },
 }
 
-module.exports = withPlugins(
-  [
-    [
-      optimizedImages,
-      {
-        assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
-        imagesName: '[name].[ext]',
-        inlineImageLimit: 1024,
-        optimizeImagesInDev: true,
-        responsive: {
-          adapter: require('responsive-loader/sharp'),
-          // format: 'webp', // not yet safari
-          placeholder: true,
-          placeholderSize: 16,
-          // sizes: [320, 640, 960, 1200, 1800], // resizing won't get optimized
-        },
-        gifsicle: {
-          interlaced: true,
-          optimizationLevel: 7,
-        },
-      },
-    ],
-  ],
-  nextConfig,
-)
+module.exports = nextConfig

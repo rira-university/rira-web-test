@@ -8,8 +8,6 @@ import {
 import contents from './introduction.json'
 import Animator from '@/common/utils/Animator'
 
-const imgSchoolResponsive = require('@/imgs/img-school.png?resize')
-
 export default function Introduction({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
 
@@ -64,23 +62,38 @@ export default function Introduction({currentSiteLang}: LocalePageProps) {
           }
         `}
       >
-        <img
-          src={require('@/imgs/img-school.png')}
-          srcSet={`${require('@/imgs/img-school.png')}, ${require('@/imgs/img-school@2x.png')} 2x, ${require('@/imgs/img-school@3x.png')} 3x`}
-          height={imgSchoolResponsive.height}
-          width={imgSchoolResponsive.width}
-          alt=''
-          css={css`
-            background: no-repeat center/90%
-              url(${imgSchoolResponsive.placeholder});
-            height: auto;
-            width: 100%;
+        <picture>
+          <source
+            media='(-webkit-min-device-pixel-ratio: 1.5)'
+            type='image/avif'
+            srcSet={require(`@/imgs/img-school-800.avif`)}
+            height={576}
+            width={1024}
+          />
+          <source
+            media='(-webkit-min-device-pixel-ratio: 1.5)'
+            type='image/webp'
+            srcSet={require(`@/imgs/img-school-800.webp`)}
+            height={576}
+            width={1024}
+          />
+          <img
+            src={require('@/imgs/img-school-1024.png')}
+            height={576}
+            width={1024}
+            alt=''
+            css={css`
+              background: no-repeat center/90%
+                url(${require('@/imgs/img-school-placeholder.png')});
+              height: auto;
+              width: 100%;
 
-            &.onload {
-              background-image: none;
-            }
-          `}
-        />
+              &.onload {
+                background-image: none;
+              }
+            `}
+          />
+        </picture>
         <Animator>
           <img
             src={require('@/imgs/img-graduation.svg')}

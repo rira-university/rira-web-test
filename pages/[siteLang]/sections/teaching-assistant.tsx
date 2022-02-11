@@ -7,8 +7,6 @@ import {
 } from '@/common/utils/font-loader'
 import contents from './teaching-assistant.json'
 
-const imgClipboardSvg = require('@/imgs/img-clipboard.svg?url')
-
 export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
   const content = contents[currentSiteLang]
 
@@ -104,7 +102,7 @@ export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
               width: 348px;
             }
 
-            > img:first-of-type {
+            picture img:first-of-type {
               background-color: pink;
               border-color: pink;
               border-radius: 100%;
@@ -165,22 +163,39 @@ export default function TeachingAssistant({currentSiteLang}: LocalePageProps) {
         `}
       >
         {[1, 2, 3, 4, 5, 6, 7].map((n, i) => {
-          const imgTeamResponsive = require(`../../../public/imgs/img-team${n}.png?resize&sizes[]=240&sizes[]=480&sizes[]=720`)
-
           return (
             <div key={n} css={css``}>
-              <img
-                src={imgTeamResponsive.src}
-                srcSet={imgTeamResponsive.srcSet}
-                height={imgTeamResponsive.height}
-                width={imgTeamResponsive.width}
-                sizes='172px, (min-width: 900px) 240px'
-                loading='lazy'
-                alt=''
-              />
+              <picture>
+                <source
+                  media='(-webkit-min-device-pixel-ratio: 1.5)'
+                  type='image/avif'
+                  srcSet={require(`../../../public/imgs/img-team${n}-344.avif`)} // ts module resolution doesn't work with interpolation
+                  height={172}
+                  width={172}
+                />
+                <source
+                  media='(-webkit-min-device-pixel-ratio: 1.5)'
+                  type='image/webp'
+                  srcSet={require(`../../../public/imgs/img-team${n}-344.webp`)} // ts module resolution doesn't work with interpolation
+                  height={172}
+                  width={172}
+                />
+                <img
+                  src={require(`../../../public/imgs/img-team${n}-240.png`)} // ts module resolution doesn't work with interpolation
+                  height={172}
+                  width={172}
+                  loading='lazy'
+                  alt=''
+                />
+              </picture>
               <h3>{content.team[i].name}</h3>
               <p>{content.team[i].description}</p>
-              <img src={imgClipboardSvg} loading='lazy' alt='' css={css``} />
+              <img
+                src={require('@/imgs/img-clipboard.svg')}
+                loading='lazy'
+                alt=''
+                css={css``}
+              />
             </div>
           )
         })}
