@@ -100,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            SOON
+            WL2 22:00
           </span>
         </a>
       </div>
