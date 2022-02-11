@@ -100,7 +100,7 @@ export default function Activity() {
               }
             `}
           >
-            WL2 22:00
+            CLOSE
           </span>
         </a>
       </div>
