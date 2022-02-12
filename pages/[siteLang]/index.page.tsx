@@ -8,9 +8,16 @@ import Roadmap from './_sections/roadmap'
 import Partners from '@/pages/[siteLang]/_sections/partners'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import Navbar from '@/pages/navbar'
+import contents from './_sections/notice.json'
+import {useEffect} from 'react'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
   const {currentSiteLang} = localePageProps
+  const content = contents[currentSiteLang]
+
+  useEffect(() => {
+    alert(content.content)
+  })
 
   return (
     <>
