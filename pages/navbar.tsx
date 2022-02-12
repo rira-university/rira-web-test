@@ -1,4 +1,4 @@
-import {MouseEvent, useState} from 'react'
+import {MouseEvent, RefObject, useEffect, useRef, useState} from 'react'
 import {css} from '@emotion/react'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {baloo2, balooDa2} from '@/common/utils/font-loader'
@@ -16,8 +16,33 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
       closeMenu()
     }
 
+  const navbarRef = useRef() as RefObject<HTMLElement>
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault()
+        const target = e.currentTarget as HTMLAnchorElement
+        const targetSelector = target.getAttribute('href') || ''
+        const targetDom = document.querySelector(
+          targetSelector === '#' ? 'body' : targetSelector,
+        )
+
+        if (targetDom) {
+          window.scrollTo({
+            behavior: 'smooth',
+            top:
+              (targetDom.getBoundingClientRect().top || 0) +
+              window.scrollY -
+              (navbarRef.current?.clientHeight || 0),
+          })
+        }
+      })
+    })
+  }, [])
+
   return (
     <nav
+      ref={navbarRef}
       css={css`
         align-items: center;
         background-color: white;
@@ -32,7 +57,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           height: 120px;
           padding: 0 calc(100% * 192 / 1440);
         }
-      `}>
+      `}
+    >
       <div
         css={css`
           align-items: center;
@@ -46,12 +72,14 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
           @media (min-width: 1200px) {
             padding: 0;
           }
-        `}>
+        `}
+      >
         <a
           href='#'
           css={css`
             display: flex;
-          `}>
+          `}
+        >
           <picture>
             <source
               type='image/avif'
@@ -96,7 +124,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
               border-radius: 5px;
               height: 3px;
             }
-          `}>
+          `}
+        >
           <div />
           <div />
           <div />
@@ -145,7 +174,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
             transform: translateY(0);
             transition: transform 0s;
           }
-        `}>
+        `}
+      >
         <div
           css={css`
             align-items: flex-end;
@@ -172,7 +202,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
                 padding: 0;
               }
             }
-          `}>
+          `}
+        >
           <a onClick={closeMenu} href='#activity'>
             Activity
           </a>
@@ -202,7 +233,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
               margin-left: 40px;
               padding: 0;
             }
-          `}>
+          `}
+        >
           {Object.values(SiteLanguage).map((siteLang) => (
             <a
               key={siteLang}
@@ -222,7 +254,8 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
                 @media (min-width: 1200px) {
                   margin: 0;
                 }
-              `}>
+              `}
+            >
               {siteLang.toUpperCase()}
             </a>
           ))}

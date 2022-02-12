@@ -1,4 +1,3 @@
-import {useEffect} from 'react'
 import {css} from '@emotion/react'
 import Cover from './_sections/cover'
 import Introduction from './_sections/introduction'
@@ -11,21 +10,6 @@ import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
   const {currentSiteLang} = localePageProps
-
-  useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault()
-        const target = e.currentTarget as HTMLAnchorElement
-        const targetSelector = target.getAttribute('href') || '#'
-        document
-          .querySelector(targetSelector === '#' ? 'body' : targetSelector)
-          ?.scrollIntoView({
-            behavior: 'smooth',
-          })
-      })
-    })
-  }, [])
 
   return (
     <main
