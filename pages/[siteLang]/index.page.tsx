@@ -7,25 +7,48 @@ import TeachingAssistant from './_sections/teaching-assistant'
 import Roadmap from './_sections/roadmap'
 import Partners from '@/pages/[siteLang]/_sections/partners'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
+import Navbar from '@/pages/navbar'
 
 export default function IndexPage(localePageProps: LocalePageProps) {
   const {currentSiteLang} = localePageProps
 
   return (
-    <main
-      css={css`
-        overflow: hidden;
-        ${currentSiteLang === SiteLanguage.Kr && 'word-break: keep-all'}
-      `}
-    >
-      <Cover {...localePageProps} />
-      <Introduction {...localePageProps} />
-      <Activity />
-      <Department {...localePageProps} />
-      <TeachingAssistant {...localePageProps} />
-      <Roadmap {...localePageProps} />
-      <Partners />
-    </main>
+    <>
+      <Navbar
+        currentSiteLang={currentSiteLang}
+        itemList={[
+          <a key='activity' href='#activity'>
+            Activity
+          </a>,
+          <a key='department' href='#department'>
+            Dept
+          </a>,
+          <a key='teaching-assistant' href='#teaching-assistant'>
+            Assistant
+          </a>,
+          <a key='roadmap' href='#roadmap'>
+            Roadmap
+          </a>,
+          <a key='footer' href='#footer'>
+            Channel
+          </a>,
+        ]}
+      />
+      <main
+        css={css`
+          overflow: hidden;
+          ${currentSiteLang === SiteLanguage.Kr && 'word-break: keep-all'}
+        `}
+      >
+        <Cover {...localePageProps} />
+        <Introduction {...localePageProps} />
+        <Activity />
+        <Department {...localePageProps} />
+        <TeachingAssistant {...localePageProps} />
+        <Roadmap {...localePageProps} />
+        <Partners />
+      </main>
+    </>
   )
 }
 

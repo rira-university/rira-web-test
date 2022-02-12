@@ -1,10 +1,21 @@
-import {MouseEvent, RefObject, useEffect, useRef, useState} from 'react'
+import {
+  cloneElement,
+  MouseEvent,
+  ReactElement,
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import {css} from '@emotion/react'
 import {LocalePageProps, SiteLanguage} from '@/common/lib/locales'
 import {baloo2, balooDa2} from '@/common/utils/font-loader'
 import {useRouter} from 'next/router'
 
-export default function Navbar({currentSiteLang}: LocalePageProps) {
+export default function Navbar({
+  currentSiteLang,
+  itemList,
+}: LocalePageProps & {itemList?: ReactElement[]}) {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const closeMenu = () => setIsMenuOpened(false)
 
@@ -22,20 +33,18 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
       anchor.addEventListener('click', (e) => {
         e.preventDefault()
         const target = e.currentTarget as HTMLAnchorElement
-        const targetSelector = target.getAttribute('href') || ''
+        const targetSelector = target.getAttribute('href') || '#'
         const targetDom = document.querySelector(
           targetSelector === '#' ? 'body' : targetSelector,
         )
 
-        if (targetDom) {
-          window.scrollTo({
-            behavior: 'smooth',
-            top:
-              (targetDom.getBoundingClientRect().top || 0) +
-              window.scrollY -
-              (navbarRef.current?.clientHeight || 0),
-          })
-        }
+        window.scrollTo({
+          behavior: 'smooth',
+          top:
+            (targetDom?.getBoundingClientRect().top || 0) +
+            window.scrollY -
+            (navbarRef.current?.clientHeight || 0),
+        })
       })
     })
   }, [])
@@ -204,21 +213,7 @@ export default function Navbar({currentSiteLang}: LocalePageProps) {
             }
           `}
         >
-          <a onClick={closeMenu} href='#activity'>
-            Activity
-          </a>
-          <a onClick={closeMenu} href='#department'>
-            Dept
-          </a>
-          <a onClick={closeMenu} href='#teaching-assistant'>
-            Assistant
-          </a>
-          <a onClick={closeMenu} href='#roadmap'>
-            Roadmap
-          </a>
-          <a onClick={closeMenu} href='#footer'>
-            Channel
-          </a>
+          {itemList?.map((item) => cloneElement(item, {onClick: closeMenu}))}
         </div>
         <div
           css={css`

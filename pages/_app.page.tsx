@@ -3,7 +3,6 @@ import type {NextPage} from 'next'
 import type {AppProps} from 'next/app'
 import Meta from '@/pages/head/meta'
 import Font from '@/pages/head/font'
-import Navbar from '@/pages/navbar'
 import Footer from '@/pages/footer'
 import {useRouter} from 'next/router'
 import '@/styles/global.css'
@@ -38,7 +37,6 @@ export default function MyApp({Component, pageProps}: AppPropsWithLayout) {
           <Meta {...pageProps} />
           <Font {...pageProps} />
         </>
-        <Navbar {...pageProps} />
         <Component {...pageProps} />
         <Footer />
       </>,
